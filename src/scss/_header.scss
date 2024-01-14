@@ -1,0 +1,41 @@
+.header {
+  padding: 15px 0;
+
+  &__container {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.nav {
+  align-items: center;
+
+  &__img {
+    margin-left: 5px;
+  }
+
+  &__list {
+    gap: 20px;
+  }
+  &__link {
+    color: var(--dark-shade50);
+
+    &-active {
+      color: rgba(31, 32, 65, 0.75);
+      font-weight: 700;
+    }
+  }
+
+  &__user {
+    position: relative;
+
+    ::after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 30px;
+      background: var(--dark-10);
+      left: -10px;
+      top: -5px;
+    }
+  }
+}
