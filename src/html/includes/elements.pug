@@ -1,24 +1,24 @@
 mixin input()
     input(class="input-email input-reset" type="text" placeholder="E-mail")
 
-mixin howManyGuests
+mixin howManyGuests(firtsname,secondname,thirdname)
     .select-menu
         input(class="select-menu__input input-reset" type="text" placeholder="Сколько гостей")
     div(class="guests guests-rooms")
         div(class="guests__box guests-rooms__box")
-            p(class="guests__text") взрослые
+            p(class="guests__text") #{firtsname}
             div(class="guests__count")
                 span(class="guests__minus" id="minusAdults") -
                 span(class="guests__num" id="numAdults") 0
                 span(class="guests__plus" id="plusAdults") +
         div(class="guests__box guests-rooms__box")
-            p(class="guests__text") дети
+            p(class="guests__text") #{secondname}
             div(class="guests__count")
                 span(class="guests__minus" id="minusChildren") -
                 span(class="guests__num" id="minusChildren") 0
                 span(class="guests__plus" id="minusChildren") +
         div(class="guests__box guests-rooms__box")
-            p(class="guests__text") младенцы
+            p(class="guests__text") #{thirdname}
             div(class="guests__count")
                 span(class="guests__minus" id="minusInfants") -
                 span(class="guests__num" id="numInfants") 0
@@ -35,9 +35,41 @@ mixin date
         input(class="date__input input-reset" type="text" placeholder="ДД.ММ.ГГГГ")
         input(class="date__input input-reset" type="text" placeholder="19.08.2019")
 
-mixin parametrs
-    div(intelligence)
-        div(class="intelligence__box")
-            img(src=require('/src/images/smile.png') alt='logo')
-            p(class="intelligence__title") Комфорт
-            p(class="intelligence__text") Шумоподавляющие стены
+mixin comfort(name,title,text)
+    div(class="comfort")
+        div(class="comfort__box")
+            img.src(class="comfort__img" src=require(`../src/images/${name}.png`) alt=name)
+            p(class="comfort__title") #{title}
+            p(class="comfort__text") #{text}
+
+mixin rangeslider
+    div(class="range-slider")
+        div(class="range-slider__box")
+                h3() диапазон цены
+                div(class="range-slider__inputs")
+                    div(class="range-slider__field")
+                        input(class="range-slider__minimum range-slider__input"
+                        type="number"
+                        value="2500")
+                    span(class="range-slider__span") -
+                    div(class="range-slider__field")
+                        input(class="range-slider__maximum range-slider__input"
+                        type="number"
+                        value="7500")
+        
+        div( class="slider")
+            div(class="slider__progres")
+                div(class="range-inputs")
+                    input(class="range-inputs__min range-inputs__num"
+                    type="range"
+                    min="0"
+                    max="10000"
+                    value="2500"
+                    step="100")
+                    input(class="range-inputs__max range-inputs__num"
+                    type="range"
+                    min="0"
+                    max="10000"
+                    value="7500"
+                    step="100")
+                    p(class="range-slider__undertext")

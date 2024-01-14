@@ -9,3 +9,4 @@ import './fonts/fonts.scss';
 import './scss/_mixin.scss';
 import "./js/calendar";
 import "./js/guests";
+import "./js/range-slider";
