@@ -1,3 +1,4 @@
+include elements
 header(class='header')
     div(class="header__container container flex")
         a(class='header__link')
@@ -17,8 +18,8 @@ header(class='header')
                     a(href="#" class="nav__link") Соглашения
                         img(class="nav__img" src=require('/src/images/down.svg'))
                 li(class="nav__item")
-                    a(href="#" class="button-uncolored btn-reset") войти
+                    +button-uncolored("войти")
                 li(class="nav__item")
-                    a(href="#" class="button-colored btn-reset") зарегистрироваться
+                    +button-colored("зарегистрироваться")
                 //- li(class="nav__item nav__user")
                 //-     a(href="#" class="nav__link") Юлий Цезарь

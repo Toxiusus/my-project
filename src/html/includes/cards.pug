@@ -4,7 +4,13 @@ include elements
 +textfield
 +date
 +comfort("smile","Комфорт","Шумопоглощающие стены")
-+rangeslider
++button-colored("click me")
++button-uncolored("click me")
++button-buy("перейти к оплате")
++checkbox("правила дома","Можно курить")
++radio
++toggle
++like
 .booking
     h1 Найдём номера под ваши пожелания
     .booking__box
@@ -26,7 +32,7 @@ include elements
                 type="text"
                 placeholder="Сколько гостей"
                 id="howManyGuests")
-            button(class="booking__btn btn-reset button-colored") подобрать номер
+            +button-buy("подобрать номер")
         .wrapper
             header
                 p.current-date

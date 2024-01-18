@@ -1,3 +1,7 @@
+mixin svg(name)
+    svg
+        use(xlink:href=`../images/${name}.svg`)
+
 mixin input()
     input(class="input-email input-reset" type="text" placeholder="E-mail")
 
@@ -42,34 +46,46 @@ mixin comfort(name,title,text)
             p(class="comfort__title") #{title}
             p(class="comfort__text") #{text}
 
-mixin rangeslider
-    div(class="range-slider")
-        div(class="range-slider__box")
-                h3() диапазон цены
-                div(class="range-slider__inputs")
-                    div(class="range-slider__field")
-                        input(class="range-slider__minimum range-slider__input"
-                        type="number"
-                        value="2500")
-                    span(class="range-slider__span") -
-                    div(class="range-slider__field")
-                        input(class="range-slider__maximum range-slider__input"
-                        type="number"
-                        value="7500")
+mixin button-colored(text)
+    button(class="button-colored btn-reset")
+        span(class="button-colored__text") #{text}
+
+mixin button-uncolored(text)
+    button(class="button-uncolored btn-reset")
+        span(class="button-uncolored__text") #{text}
+
+mixin button-buy(text)
+    button(class="button-buy btn-reset")
+        span(class="button-buy__text") #{text}
         
-        div( class="slider")
-            div(class="slider__progres")
-                div(class="range-inputs")
-                    input(class="range-inputs__min range-inputs__num"
-                    type="range"
-                    min="0"
-                    max="10000"
-                    value="2500"
-                    step="100")
-                    input(class="range-inputs__max range-inputs__num"
-                    type="range"
-                    min="0"
-                    max="10000"
-                    value="7500"
-                    step="100")
-                    p(class="range-slider__undertext")
+mixin radio
+    div(class="radio")
+        label(class="radio__label") 
+            input(class="radio__input" type="radio" name="rd" checked)
+            span(class="radio__span")
+            p(class="radio__text") Мужчина
+        label(class="radio__label")
+            input(class="radio__input" type="radio" name="rd")
+            span(class="radio__span")
+            p(class="radio__text") Женщина
+
+mixin toggle
+    div(class="toggle")
+        label(class="toggle__label" for="toggle")
+            input(class="toggle__input" type="checkbox" id="toggle")
+            span(class="toggle__span")
+            p(class="toggle__text") Получать спецпредложения
+
+mixin checkbox(title,text)
+    div(class="rules")
+        h3 #{title}
+            label(class="check option")
+                input(class="check__input" type="checkbox")
+                span(class="check__box")
+                span(class="check__text") #{text}
+
+mixin like
+    div(class="like")
+        div(class="like__content")
+            span(class="like__img")
+            span(class="like__num") 0

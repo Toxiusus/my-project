@@ -11,29 +11,31 @@ html {
 .page {
   min-height: 100%;
   -webkit-text-size-adjust: 100%;
-  &__body {
-    font-family: var(--font-family);
-    background-color: var(--light-color);
-    margin: 0;
-    min-width: 320px;
-    min-height: 100%;
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: normal;
-  }
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 var(--container-offset);
-  max-width: var(--container-width);
+html,
+body {
+  font-family: var(--font-family);
+  background-color: var(--light-color);
+  margin: 0;
+  min-width: 320px;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
 }
 
 .global-wrapper {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
 }
 
 .main {
@@ -125,36 +127,4 @@ p {
   padding: 0;
   background-color: transparent;
   cursor: pointer;
-}
-
-.button-uncolored {
-  font-size: 12px;
-  font-family: var(--second-family);
-  padding: 10px 20px;
-  text-transform: uppercase;
-  border: 2px solid var(--Primary-Gradient, #bc9cff);
-  border-radius: 50px;
-  font-weight: 700;
-  color: var(--Primary-Gradient, #bc9cff);
-}
-
-.button-colored {
-  font-size: 12px;
-  font-family: var(--second-family);
-  padding: 10px 20px;
-  text-transform: uppercase;
-  background: var(--primary-gradient);
-  border-radius: 50px;
-  font-weight: 700;
-  color: var(--light-color);
-}
-
-.global-btn {
-  display: flex;
-  height: 44px;
-  padding: 11px 15px;
-  border-radius: 4px;
-  border: 1px solid var(--dark-shade25);
-  color: var(--dark-shade75);
-  align-items: center;
 }

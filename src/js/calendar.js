@@ -74,7 +74,6 @@ const setListener = (element, type, handler) => {
   const btnDelete = document.querySelector('.btn__delete');
   const btnSubmit = document.querySelector('.btn__submit');
   const bookingInputs = document.querySelectorAll('.booking__input');
-  console.log(bookingInputs);
   const bookingWrapper = document.querySelector('.wrapper');
   const inputStart = document.getElementById('start');
   const inputEnd = document.getElementById('end');

@@ -1,12 +1,11 @@
-import './main.scss';
+import './scss/main.scss';
 import './scss/_header.scss';
 import './scss/_footer.scss';
 import './scss/_vars.scss';
 import './scss/_hero.scss';
 import './scss/_cards.scss';
 import './scss/_elements.scss';
-import './fonts/fonts.scss';
 import './scss/_mixin.scss';
-import "./js/calendar";
-import "./js/guests";
+// import "./js/calendar";
+// import "./js/guests";
 import "./js/range-slider";
