@@ -127,7 +127,6 @@
   transition: .3s ease-in-out;
 
   &:hover {
-    color: rgba(31, 32, 65, 0.50);
     opacity: 0.5;
   }
   &__text{
@@ -146,7 +145,6 @@
   transition: .3s ease-in-out;
 
   &:hover {
-    color: rgba(31, 32, 65, 0.50);
     opacity: 0.5;
   }
 
@@ -166,7 +164,6 @@
   transition: .3s ease-in-out;
 
   &:hover {
-    color: rgba(31, 32, 65, 0.50);
     opacity: 0.5;
   }
 
@@ -326,4 +323,39 @@
 
 .check__input:checked + .check__box {
   background-image: url("../images/checked.svg");
+}
+
+.like {
+  &__content {
+    border-radius: 10px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    background-color: var(--light-color);
+    width: 40px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__img {
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/favorite-empty.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__num {
+    color: var(--dark-shade25);
+    text-align: center;
+    font-size: 10px;
+  }
+}
+
+.like__content-active {
+  border: 1px solid #BC9CFF;
+}
+.like__img-active {
+  background-image: url('../images/favorite.svg');
+}
+.like__num-active {
+  color: var(--Primary-Color, #BC9CFF);
 }

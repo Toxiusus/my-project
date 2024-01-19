@@ -42,7 +42,7 @@ mixin date
 mixin comfort(name,title,text)
     div(class="comfort")
         div(class="comfort__box")
-            img.src(class="comfort__img" src=require(`../src/images/${name}.png`) alt=name)
+            img.src(class="comfort__img" src=require(`../src/images/${name}.svg`) alt=name)
             p(class="comfort__title") #{title}
             p(class="comfort__text") #{text}
 
@@ -78,14 +78,27 @@ mixin toggle
 
 mixin checkbox(title,text)
     div(class="rules")
-        h3 #{title}
-            label(class="check option")
+        h3(class="rules__title") #{title}
+        label(class="check option")
                 input(class="check__input" type="checkbox")
                 span(class="check__box")
                 span(class="check__text") #{text}
 
 mixin like
     div(class="like")
-        div(class="like__content")
-            span(class="like__img")
-            span(class="like__num") 0
+        div(class="like__content like__content-active")
+            span(class="like__img like__img-active")
+            span(class="like__num like__num-active") 2
+
+mixin rating
+    div(class="star")
+        input(class="star__fill" type="radio" name="rate" id="rate-5")
+        label(for="rate-5")
+        input(class="star__fill" type="radio" name="rate" id="rate-4")
+        label(for="rate-4")
+        input(class="star__fill" type="radio" name="rate" id="rate-3")
+        label(for="rate-3")
+        input(class="star__fill" type="radio" name="rate" id="rate-2")
+        label(for="rate-2")
+        input(class="star__fill" type="radio" name="rate" id="rate-1")
+        label(for="rate-1")
