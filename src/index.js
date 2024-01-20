@@ -8,4 +8,5 @@ import './scss/_elements.scss';
 import './scss/_mixin.scss';
 // import "./js/calendar";
 // import "./js/guests";
-import "./js/range-slider";
+// import "./js/range-slider";
+import "./js/like";

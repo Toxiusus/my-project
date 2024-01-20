@@ -88,17 +88,75 @@ mixin like
     div(class="like")
         div(class="like__content like__content-active")
             span(class="like__img like__img-active")
-            span(class="like__num like__num-active") 2
+            span(class="like__num like__num-active") 12
+            div(class="like")
+        div(class="like__content")
+            span(class="like__img")
+            span(class="like__num") 2
 
 mixin rating
-    div(class="star")
-        input(class="star__fill" type="radio" name="rate" id="rate-5")
-        label(for="rate-5")
-        input(class="star__fill" type="radio" name="rate" id="rate-4")
-        label(for="rate-4")
-        input(class="star__fill" type="radio" name="rate" id="rate-3")
-        label(for="rate-3")
-        input(class="star__fill" type="radio" name="rate" id="rate-2")
-        label(for="rate-2")
-        input(class="star__fill" type="radio" name="rate" id="rate-1")
-        label(for="rate-1")
+    div(class="rating")
+        div(class="rating__items flex")
+            input(class="rating__item" name="rating" type="radio" value="5" id="rating__5")
+            label(class="rating__label" for="rating__5")
+            input(class="rating__item" name="rating" type="radio" value="4" id="rating__4")
+            label(class="rating__label" for="rating__4")
+            input(class="rating__item" name="rating" type="radio" value="3" id="rating__3")
+            label(class="rating__label" for="rating__3")
+            input(class="rating__item" name="rating" type="radio" value="2" id="rating__2")
+            label(class="rating__label" for="rating__2")
+            input(class="rating__item" name="rating" type="radio" value="1" id="rating__1")
+            label(class="rating__label" for="rating__1")
+
+mixin pagination(name)
+    div(class="pagination flex")
+        a(class="pagination__link pagination__link-active" href="") 1
+        a(class="pagination__link" href="") 2
+        a(class="pagination__link" href="") 3
+        a(class="pagination__link" href="") ...
+        a(class="pagination__link" href="") 15
+        a(class="pagination__link-forward" href="")
+            img.src(src=require(`../src/images/${name}.svg`))
+        p(class="pagination__text") 1 – 12 из 100+ вариантов аренды
+
+mixin bullet-list
+    div(class="bullet-list")
+        div(class="bullet-list__content")
+            h2 Правила
+            p(class="bullet-list__text bullet-list__textdot") Нельзя с питомцами
+            p(class="bullet-list__text bullet-list__textdot") Без вечеринок и мероприятий
+            p(class="bullet-list__text bullet-list__textdot") Время прибытия — после 13:00, а выезд до 12:00
+        div(class="bullet-list__content")
+            h2 Отмена
+            p(class="bullet-list__text") Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+mixin range-slider
+    div(class="range-slider")
+        div(class="range-slider__box")
+            p(class="range-slider__text")
+        div(class="range-slider__inputs")
+            div(class="range-slider__field")
+                input(class="range-slider__minimum range-slider__input"
+                  type="number"
+                  value="2500")
+                  span -
+            div(class="range-slider__field")
+                input( class="range-slider__maximum range-slider__input"
+                  type="number"
+                  value="7500")
+        div(class="slider")
+            div(class="slider__progres")
+        div(class="range-inputs")
+            input(class="range-inputs__min range-inputs__num"
+              type="range"
+              min="0"
+              max="10000"
+              value="2500"
+              step="100")
+            input( class="range-inputs__max range-inputs__num"
+              type="range"
+              min="0"
+              max="10000"
+              value="7500"
+              step="100")
+              p(class="range-slider__undertext") Стоимость за сутки пребывания в номере
