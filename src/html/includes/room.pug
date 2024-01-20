@@ -1,9 +1,14 @@
-section(class="details")
-  div(class="details__content")
-    div(class="details__box")
-      img(src=require('/src/images/room-1.jpg') alt='logo')
-      img(src=require('/src/images/room-1.jpg') alt='logo')
-      img(src=require('/src/images/room-1.jpg') alt='logo')
+include elements
+section(class="room")
+  div(class="room__content")
+    div(class="room__box")
+      img(class="room__largeimg" src=require('/src/images/room-1.png') alt='logo')
+      img(class="room__img" src=require('/src/images/room-2.png') alt='logo')
+      img(class="room__img" src=require('/src/images/room-3.png') alt='logo')
+  div(class="room-about container")
+    +comfort("smile","Комфорт","Шумопоглощающие стены")
+    +comfort("city","Удобство","Окно в каждой из спален")
+    +comfort("hot","Уют","Номер оснащён камином")
 
 
 

@@ -5,7 +5,7 @@ import './scss/_vars.scss';
 import './scss/_hero.scss';
 import './scss/_cards.scss';
 import './scss/_elements.scss';
-import './scss/_room-details';
+import './scss/_room.scss';
 import './scss/_mixin.scss';
 // import "./js/calendar";
 // import "./js/guests";
