@@ -57,7 +57,7 @@ mixin button-uncolored(text)
 mixin button-buy(text)
     button(class="button-buy btn-reset")
         span(class="button-buy__text") #{text}
-        
+
 mixin radio
     div(class="radio")
         label(class="radio__label") 
@@ -80,16 +80,12 @@ mixin checkbox(title,text)
     div(class="rules")
         h3(class="rules__title") #{title}
         label(class="check option")
-                input(class="check__input" type="checkbox")
-                span(class="check__box")
-                span(class="check__text") #{text}
+            input(class="check__input" type="checkbox")
+            span(class="check__box")
+            span(class="check__text") #{text}
 
 mixin like
     div(class="like")
-        div(class="like__content like__content-active")
-            span(class="like__img like__img-active")
-            span(class="like__num like__num-active") 12
-            div(class="like")
         div(class="like__content")
             span(class="like__img")
             span(class="like__num") 2
@@ -130,33 +126,16 @@ mixin bullet-list
             h2 Отмена
             p(class="bullet-list__text") Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
-mixin range-slider
-    div(class="range-slider")
-        div(class="range-slider__box")
-            p(class="range-slider__text")
-        div(class="range-slider__inputs")
-            div(class="range-slider__field")
-                input(class="range-slider__minimum range-slider__input"
-                  type="number"
-                  value="2500")
-                  span -
-            div(class="range-slider__field")
-                input( class="range-slider__maximum range-slider__input"
-                  type="number"
-                  value="7500")
-        div(class="slider")
-            div(class="slider__progres")
-        div(class="range-inputs")
-            input(class="range-inputs__min range-inputs__num"
-              type="range"
-              min="0"
-              max="10000"
-              value="2500"
-              step="100")
-            input( class="range-inputs__max range-inputs__num"
-              type="range"
-              min="0"
-              max="10000"
-              value="7500"
-              step="100")
-              p(class="range-slider__undertext") Стоимость за сутки пребывания в номере
+mixin reviews(name)
+    div(class="reviews")
+        div(class="reviews__content")
+            div(class="reviews__textbox flex")
+                h2 Отзывы посетителей номера
+                p(class="reviews__text") 2 отзыва
+            div(class="reviews__userbox")
+                img.src(class="reviews__img" src=require(`../src/images/${name}.png`))
+                p( class="reviews__name") Мурад Сарафанов
+                p(class="reviews__days") 5 дней назад
+            div(class="reviews__commentsbox")
+                +like
+                p(class="reviews__comment") Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивалкомплименты повару — никто не жаловался из соседей.
