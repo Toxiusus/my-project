@@ -6,40 +6,25 @@ section(class="room")
       img(class="room__img" src=require('/src/images/room-2.png') alt='logo')
       img(class="room__img" src=require('/src/images/room-3.png') alt='logo')
   div(class="room-about container")
-    +comfort("smile","Комфорт","Шумопоглощающие стены")
-    +comfort("city","Удобство","Окно в каждой из спален")
-    +comfort("hot","Уют","Номер оснащён камином")
+    div(class="comfort")
+      h2 Сведения о номере
+      +comfort("smile","Комфорт","Шумопоглощающие стены")
+      +comfort("city","Удобство","Окно в каждой из спален")
+      +comfort("hot","Уют","Номер оснащён камином")
+    div(class="impressions")
+      h2 Впечатления от номера
+      div(class="impressions__content")
+        div(class="impressions__vote")
+          p(class="impressions__num") 260
+          span(class="impressions__text") голосов
+        div(class="impressions__box")
+          p(class="impressions__orange impressions__global") Великолепно
+          p(class="impressions__green impressions__global") Хорошо
+          p(class="impressions__purple impressions__global") Удовлетворительно
+          p(class="impressions__black impressions__global") Разочарован
 
 
 
-
-//- <section class="show">
-//-   <div class="show__content">
-//-     <div class="show__box">
-//-       <img class="show__largeimg" src="../img/room-1.jpg" alt="" />
-//-       <img class="show__img" src="../img/room-2.jpg" alt="" />
-//-       <img class="show__img" src="../img/room-3.jpg" alt="" />
-//-     </div>
-//-     <div class="container">
-//-       <div class="room-about">
-//-         <div class="intelligence">
-//-           <p class="intelligence__maintitle">Сведения о номере</p>
-//-           <div class="intelligence__box">
-//-             <img class="intelligence__img" src="../img/smile.png" alt="" />
-//-             <p class="intelligence__title">Комфорт</p>
-//-             <p class="intelligence__text">Шумоподавляющие стены</p>
-//-           </div>
-//-           <div class="intelligence__box">
-//-             <img class="intelligence__img" src="../img/city.png" alt="" />
-//-             <p class="intelligence__title">Удобство</p>
-//-             <p class="intelligence__text">Окно в каждой из спален</p>
-//-           </div>
-//-           <div class="intelligence__box">
-//-             <img class="intelligence__img" src="../img/fire.png" alt="" />
-//-             <p class="intelligence__title">Уют</p>
-//-             <p class="intelligence__text">Номер оснащён камином</p>
-//-           </div>
-//-         </div>
 //-         <div class="impressions">
 //-           <p class="impressions__maintitle">Впечатления от номера</p>
 //-           <div class="impressions__content">
