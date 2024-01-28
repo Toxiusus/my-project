@@ -1,9 +1,9 @@
-mixin svg(name)
-    svg
-        use(xlink:href=`../images/${name}.svg`)
+mixin inputEmail(imagename)
+    div(class="email")
+        input(class="email__input input-reset" type="text" placeholder="E-mail")
+        div(class="email__box")
+            img.src(class="comfort__img" src=require(`../src/images/${imagename}.svg`) alt=name)
 
-mixin input()
-    input(class="input-email input-reset" type="text" placeholder="E-mail")
 
 mixin howManyGuests(firtsname,secondname,thirdname)
     .select-menu
@@ -43,7 +43,7 @@ mixin comfort(name,title,text)
     div(class="comfort")
         div(class="comfort__box")
             img.src(class="comfort__img" src=require(`../src/images/${name}.svg`) alt=name)
-            p(class="comfort__title") #{title}
+            p(class="comfort__uptitle") #{title}
             p(class="comfort__text") #{text}
 
 mixin button-colored(text)
@@ -116,26 +116,23 @@ mixin pagination(name)
         p(class="pagination__text") 1 – 12 из 100+ вариантов аренды
 
 mixin bullet-list
-    div(class="bullet-list")
+    div(class="bullet-list container")
         div(class="bullet-list__content")
-            h2 Правила
+            h2(class="bullet-list__title") Правила
             p(class="bullet-list__text bullet-list__textdot") Нельзя с питомцами
             p(class="bullet-list__text bullet-list__textdot") Без вечеринок и мероприятий
             p(class="bullet-list__text bullet-list__textdot") Время прибытия — после 13:00, а выезд до 12:00
         div(class="bullet-list__content")
-            h2 Отмена
+            h2(class="bullet-list__title") Отмена
             p(class="bullet-list__text") Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
-mixin reviews(name)
-    div(class="reviews")
+mixin reviews(name,username,comment)
+    div(class="reviews__box")
         div(class="reviews__content")
-            div(class="reviews__textbox flex")
-                h2 Отзывы посетителей номера
-                p(class="reviews__text") 2 отзыва
             div(class="reviews__userbox")
                 img.src(class="reviews__img" src=require(`../src/images/${name}.png`))
-                p( class="reviews__name") Мурад Сарафанов
+                p( class="reviews__name") #{username}
                 p(class="reviews__days") 5 дней назад
             div(class="reviews__commentsbox")
                 +like
-                p(class="reviews__comment") Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивалкомплименты повару — никто не жаловался из соседей.
+                p(class="reviews__comment") #{comment}

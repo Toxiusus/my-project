@@ -43,10 +43,8 @@ footer(class="footer")
                 ul(class="top__list list-reset")
                     li(class="top__item")
                         p(class="top__text") Получайте специальные предложения и новости сервиса
-                        form(class="top__form")
-                            input(class="top__input input-reset" type="text" placeholder="E-mail")
-                            button(class="top__btn btn-reset")
-                                img(src=require('/src/images/rightarow.svg'))
+                        +inputEmail("rightarow")
+
     div(class="bot")
         div(class="bot__container container")
             p(class="bot__text") Copyright © 2018 Toxin отель. Все права защищены.
