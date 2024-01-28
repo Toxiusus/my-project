@@ -1,2 +1,8 @@
-@include font-face("MontserratRegular", "../fonts/MontserratRegular.woff2", 400, normal);
-@include font-face("MontserratBold", "../fonts/MontserratBold.woff2", 700, normal);
+@font-face {
+    font-family: "MontserratRegular";
+    src : url("../fonts/MontserratRegular.woff2");
+}
+@font-face {
+    font-family: "MontserratBold";
+    src : url("../fonts/MontserratBold.woff2");
+}

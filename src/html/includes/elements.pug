@@ -1,13 +1,17 @@
+mixin default-textfield(name)
+    div(class="default-textfield")
+        input(class="default-textfield__input input-reset reg__input" placeholder=`${name}`)
+
 mixin inputEmail(imagename)
-    div(class="email")
-        input(class="email__input input-reset" type="text" placeholder="E-mail")
-        div(class="email__box")
+    div(class="default-textfield")
+        input(class="default-textfield__input input-reset" type="text" placeholder="E-mail")
+        div(class="default-textfield__box")
             img.src(class="comfort__img" src=require(`../src/images/${imagename}.svg`) alt=name)
 
 
 mixin howManyGuests(firtsname,secondname,thirdname)
     .select-menu
-        input(class="select-menu__input input-reset" type="text" placeholder="Сколько гостей")
+        +default-textfield("Имя")
     div(class="guests guests-rooms")
         div(class="guests__box guests-rooms__box")
             p(class="guests__text") #{firtsname}
@@ -31,14 +35,6 @@ mixin howManyGuests(firtsname,secondname,thirdname)
             button(class="btn-reset guests-btn__action" id="guestsDelete") очистить
             button(class="btn-reset guests-btn__action" id="guestsSubmit") применить
 
-mixin textfield
-    input(class="select-menu__input input-reset" type="text" placeholder="ДД.ММ.ГГГГ")
-
-mixin date
-    .date
-        input(class="date__input input-reset" type="text" placeholder="ДД.ММ.ГГГГ")
-        input(class="date__input input-reset" type="text" placeholder="19.08.2019")
-
 mixin comfort(name,title,text)
     div(class="comfort")
         div(class="comfort__box")
@@ -55,7 +51,7 @@ mixin button-uncolored(text)
         span(class="button-uncolored__text") #{text}
 
 mixin button-buy(text)
-    button(class="button-buy btn-reset")
+    button(class="button-buy btn-reset reg__button")
         span(class="button-buy__text") #{text}
 
 mixin radio
@@ -106,14 +102,16 @@ mixin rating
 
 mixin pagination(name)
     div(class="pagination flex")
-        a(class="pagination__link pagination__link-active" href="") 1
-        a(class="pagination__link" href="") 2
-        a(class="pagination__link" href="") 3
-        a(class="pagination__link" href="") ...
-        a(class="pagination__link" href="") 15
-        a(class="pagination__link-forward" href="")
-            img.src(src=require(`../src/images/${name}.svg`))
-        p(class="pagination__text") 1 – 12 из 100+ вариантов аренды
+        div(class="pagination__links flex")
+            a(class="pagination__link pagination__link-active" href="") 1
+            a(class="pagination__link" href="") 2
+            a(class="pagination__link" href="") 3
+            a(class="pagination__link" href="") ...
+            a(class="pagination__link" href="") 15
+            a(class="pagination__link-forward" href="#")
+                img.src(src=require(`../src/images/${name}.svg`))
+        div(class="pagination__box")
+            p(class="pagination__text") 1 – 12 из 100+ вариантов аренды
 
 mixin bullet-list
     div(class="bullet-list container")
@@ -136,3 +134,69 @@ mixin reviews(name,username,comment)
             div(class="reviews__commentsbox")
                 +like
                 p(class="reviews__comment") #{comment}
+
+mixin sign-in
+    section(class="login")
+        div(class="login__inner container")
+            form(class="form")
+                h1(class="form__main-title") Войти
+                +default-textfield("Email")
+                +default-textfield("Пароль")
+                +button-buy("войти")
+                div(class="form__box flex")
+                    p(class="form__text") Нет аккаунта на Toxin?
+                    +button-uncolored("создать")
+
+mixin registration
+    section(class="registration")
+        div(class="registration__inner container")
+            form(class="reg")
+                h1(class="reg__main-title") Регистрация аккаунта
+                +default-textfield("Имя")
+                +default-textfield("Фамилия")
+                +radio
+                h3(class="reg__title") дата рождения
+                +default-textfield("ДД.ММ.ГГГГ")
+                h3(class="reg__title") данные для входа в сервис
+                +default-textfield("Email")
+                +default-textfield("Пароль")
+                +toggle
+                +button-buy("зарегистрироваться")
+                div(class="reg__box flex")
+                    p(class="reg__text") Уже есть аккаунт на Toxin
+                    +button-uncolored("войти")
+
+mixin room-card(imagename,number,luxury,price,numofrev)
+    div(class="room-card")
+        img.src(class="comfort__img" src=require(`../src/images/${imagename}.jpg`))
+        div(class="room-card__info flex")
+            p(class="room-card__num") №
+                span(class="room-card__number") #{number}
+                span(class="room-card__luxury") #{luxury}
+            p(class="room-card__price") #{price}
+                span(class="room-card__day") в сутки
+        div(class="room-card__rating flex")
+            +rating
+            p(class="room-card__numofrev") #{numofrev}
+                span(class="room-card__reviews") Отзывов 
+
+mixin calendar
+    .wrapper
+        header
+            p.current-date
+        .icons
+            span(id="prev" class="left" src=require('/src/images/Logo.svg') alt='logo')
+            span(id="prev" class="left" src=require('/src/images/Logo.svg') alt='logo')
+        .calendar
+            ul.weeks
+                li Пн
+                li Вт
+                li Ср
+                li Чт
+                li Пт
+                li Сб
+                li Вс
+            ul.days
+                .buttons
+                    button(class="btn__delete btn-reset") очистить
+                    button(class="btn__submit btn-reset") применить

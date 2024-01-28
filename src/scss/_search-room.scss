@@ -1,0 +1,20 @@
+.search-room{
+    padding: 30px 0 70px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+  
+    &__title {
+      grid-column: 2;
+    }
+  
+    &__container {
+      display: grid;
+      gap: 0 60px;
+      grid-template-columns: 266px 875px;
+    }
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px 12px;
+  }
+  
