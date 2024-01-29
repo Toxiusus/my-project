@@ -11,7 +11,7 @@ mixin inputEmail(imagename)
 
 mixin howManyGuests(firtsname,secondname,thirdname)
     .select-menu
-        +default-textfield("Имя")
+        +default-textfield("Сколько гостей")
     div(class="guests guests-rooms")
         div(class="guests__box guests-rooms__box")
             p(class="guests__text") #{firtsname}
@@ -72,13 +72,16 @@ mixin toggle
             span(class="toggle__span")
             p(class="toggle__text") Получать спецпредложения
 
-mixin checkbox(title,text)
-    div(class="rules")
-        h3(class="rules__title") #{title}
-        label(class="check option")
-            input(class="check__input" type="checkbox")
-            span(class="check__box")
-            span(class="check__text") #{text}
+mixin checkbox(text,title)
+    div(class="col")
+        div(class="row")
+            label(class="checkbox flex")
+                input( class="checkbox__input" type="checkbox")
+                span(class="checkbox__checkmark")
+                    img(class="checkbox-icon" src=require('/src/images/checkmark.svg'))
+                div(class="checkbox__wrap")
+                    span(class="checkbox__title") #{title}
+                    span(class="checkbox__label") #{text}
 
 mixin like
     div(class="like")
@@ -100,6 +103,17 @@ mixin rating
             input(class="rating__item" name="rating" type="radio" value="1" id="rating__1")
             label(class="rating__label" for="rating__1")
 
+mixin bullet-list
+    div(class="bullet-list container")
+        div(class="bullet-list__content")
+            h2(class="bullet-list__title") Правила
+            p(class="bullet-list__text bullet-list__textdot") Нельзя с питомцами
+            p(class="bullet-list__text bullet-list__textdot") Без вечеринок и мероприятий
+            p(class="bullet-list__text bullet-list__textdot") Время прибытия — после 13:00, а выезд до 12:00
+        div(class="bullet-list__content")
+            h2(class="bullet-list__title") Отмена
+            p(class="bullet-list__text") Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
 mixin pagination(name)
     div(class="pagination flex")
         div(class="pagination__links flex")
@@ -113,17 +127,6 @@ mixin pagination(name)
         div(class="pagination__box")
             p(class="pagination__text") 1 – 12 из 100+ вариантов аренды
 
-mixin bullet-list
-    div(class="bullet-list container")
-        div(class="bullet-list__content")
-            h2(class="bullet-list__title") Правила
-            p(class="bullet-list__text bullet-list__textdot") Нельзя с питомцами
-            p(class="bullet-list__text bullet-list__textdot") Без вечеринок и мероприятий
-            p(class="bullet-list__text bullet-list__textdot") Время прибытия — после 13:00, а выезд до 12:00
-        div(class="bullet-list__content")
-            h2(class="bullet-list__title") Отмена
-            p(class="bullet-list__text") Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-
 mixin reviews(name,username,comment)
     div(class="reviews__box")
         div(class="reviews__content")
@@ -134,6 +137,20 @@ mixin reviews(name,username,comment)
             div(class="reviews__commentsbox")
                 +like
                 p(class="reviews__comment") #{comment}
+
+mixin room-card(imagename,number,luxury,price,numofrev)
+    div(class="room-card")
+        img.src(class="comfort__img" src=require(`../src/images/${imagename}.jpg`))
+        div(class="room-card__info flex")
+            p(class="room-card__num") №
+                span(class="room-card__number") #{number}
+                span(class="room-card__luxury") #{luxury}
+            p(class="room-card__price") #{price}
+                span(class="room-card__day") в сутки
+        div(class="room-card__rating flex")
+            +rating
+            p(class="room-card__numofrev") #{numofrev}
+                span(class="room-card__reviews") Отзывов 
 
 mixin sign-in
     section(class="login")
@@ -166,20 +183,6 @@ mixin registration
                     p(class="reg__text") Уже есть аккаунт на Toxin
                     +button-uncolored("войти")
 
-mixin room-card(imagename,number,luxury,price,numofrev)
-    div(class="room-card")
-        img.src(class="comfort__img" src=require(`../src/images/${imagename}.jpg`))
-        div(class="room-card__info flex")
-            p(class="room-card__num") №
-                span(class="room-card__number") #{number}
-                span(class="room-card__luxury") #{luxury}
-            p(class="room-card__price") #{price}
-                span(class="room-card__day") в сутки
-        div(class="room-card__rating flex")
-            +rating
-            p(class="room-card__numofrev") #{numofrev}
-                span(class="room-card__reviews") Отзывов 
-
 mixin calendar
     .wrapper
         header
@@ -200,3 +203,21 @@ mixin calendar
                 .buttons
                     button(class="btn__delete btn-reset") очистить
                     button(class="btn__submit btn-reset") применить
+
+mixin range-slider
+    div(class="range")
+        div(class="range__inner")
+            h2 Price range
+        div(class="price-input flex")
+            div(class="price-input__field flex")
+                span Min
+                input(class="price-input__min price-value" type="number" value="5000")
+            div(class="price-input__separator flex") -
+            div(class="price-input__field flex")
+                span Max
+                input(class="price-input__max price-value" type="number" value="10000")
+        div(class="slider")
+            div(class="slider__progress")
+        div(class="range-input")
+            input(class="range-input__min slider-input" type="range" min="0" max="10000" value="5000")
+            input(class="range-input__max slider-input" type="range" min="0" max="10000" value="10000")

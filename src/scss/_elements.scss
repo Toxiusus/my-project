@@ -71,7 +71,6 @@
 }
 
 .comfort {
-
   &__title {
     margin-bottom: 20px;
   }
@@ -167,10 +166,10 @@
       content: '';
       background-image: url("../images/arrow.svg");
       background-repeat: no-repeat;
-      width: 40px;
-      height: 40px;
-      right: 0;
-      top: 14px;
+      width: 30px;
+      height: 30px;
+      right: -100px;
+      top: -3px;
     }
   }
 }
@@ -287,51 +286,63 @@
   left: 24px;
 }
 
-.rules {
-  &__title {
-    margin-bottom: 17px;
-  }
+.col {
+  display: grid;
+  gap: 20px;
 }
 
-.option {
-  display: block;
+.checkbox {
+  align-items: stretch;
   margin-bottom: 13px;
-}
 
-.check {
-  display: flex;
-  align-items: center;
-
-  &__text {
-    color: var(--dark-50, rgba(31, 32, 65, 0.50));
-    line-height: 18px;
-    padding-left: 30px;
+  &__checkmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--dark-25, rgba(31, 32, 65, 0.25));
+    border-radius: 4px;
+    cursor: pointer;
   }
 
   &__title {
     color: var(--dark-75, rgba(31, 32, 65, 0.75));
+    font-family: var(--second-family);
     font-weight: 700;
     line-height: 18px;
-    padding-left: 30px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+  }
+
+  &__label {
+    color: var(--dark-50, rgba(31, 32, 65, 0.50));
+    font-size: 12px;
+    line-height: 14px;
+    margin-left: 10px;
+  }
+
+  &__wrap {
+    width: 255px;
+    display: grid;
   }
 }
 
-.check__input {
-  position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.checkbox>input {
+  display: none;
 }
 
-.check__box {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-image: url("../images/check-disabled.svg");
+.checkbox>input,
+.checkbox .checkbox-icon {
+  display: none;
 }
 
-.check__input:checked+.check__box {
-  background-image: url("../images/checked.svg");
+.checkbox.state_checked .checkbox__checkmark {
+  border: 1px solid var(--Primary-Color, #BC9CFF);
+}
+
+.checkbox.state_checked .checkbox__checkmark .checkbox-icon {
+  display: flex;
 }
 
 .like {
@@ -856,4 +867,84 @@ header .current-date {
     width: 30px;
     height: 30px;
   }
+}
+
+.range {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px 25px 40px;
+}
+
+.price-input {
+  width: 100%;
+  margin: 30px 0 35px;
+
+  &__field {
+    height: 45px;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__separator {
+    width: 130px;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.pricevalue {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 19px;
+  text-align: center;
+  margin-left: 12px;
+  border-radius: 5px;
+  border-radius: 1px solid #999;
+  -webkit-appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+
+.slider {
+  height: 6px;
+  border-radius: 3px;
+  border: 1px solid var(--dark-25, rgba(31, 32, 65, 0.25));
+  background: #FFF;
+  position: relative;
+
+  &__progress {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--primary-second);
+  }
+}
+
+.range-input {
+  position: relative;
+}
+.slider-input {
+  position: absolute;
+  top: -6px;
+  height: 6px;
+  width: 100%;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  background-color: var(--primary-second);
 }

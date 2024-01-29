@@ -1,6 +1,13 @@
 section(class="search-room")
   div(class="search-room__container container")
-    aside
+    aside(class="aside")
+      h3(class="aside__title") правила дома
+      +checkbox("Можно курить")
+      +checkbox("Можно с питомцами")
+      +checkbox("Можно пригласить гостей (до 10 человек)")
+      h3(class="aside__title") доступность
+      +checkbox("Ширина коридоров в номере не менее 91 см.)","Широкий коридор")
+      +checkbox("На 1 этаже вас встретит специалист  и проводит до номера.","Помощник для инвалидов")
     div(class="cards")
       +room-card("card1","888","ЛЮКС","9 990","145")
       +room-card("card2","840","","9 900","65")
