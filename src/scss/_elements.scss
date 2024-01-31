@@ -878,7 +878,12 @@ header .current-date {
 }
 
 .price-input {
+  align-items: center;
   justify-content: right;
+
+  &__title {
+    margin-right: 168px;
+  }
 }
 
 .price-input .field {
