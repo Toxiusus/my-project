@@ -205,19 +205,16 @@ mixin calendar
                     button(class="btn__submit btn-reset") применить
 
 mixin range-slider
-    div(class="range")
-        div(class="range__inner")
-            h2 Price range
+    div(class="range-box")
         div(class="price-input flex")
-            div(class="price-input__field flex")
-                span Min
-                input(class="price-input__min price-value" type="number" value="5000")
-            div(class="price-input__separator flex") -
-            div(class="price-input__field flex")
-                span Max
-                input(class="price-input__max price-value" type="number" value="10000")
+            h2 Price range
+            div(class="field")
+                input(class="input-min" type="number" value="2500")
+            div(class="separator") -
+            div(class="field")
+                input(class="input-max" type="number" value="7500")
         div(class="slider")
-            div(class="slider__progress")
+            div(class="progress")
         div(class="range-input")
-            input(class="range-input__min slider-input" type="range" min="0" max="10000" value="5000")
-            input(class="range-input__max slider-input" type="range" min="0" max="10000" value="10000")
+            input(class="range-min" type="range" min="0" max="10000" value="2500" step="100")
+            input(class="range-max" type="range" min="0" max="10000" value="7500" step="100")
