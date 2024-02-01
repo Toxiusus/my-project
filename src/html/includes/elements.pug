@@ -218,3 +218,23 @@ mixin range-slider
         div(class="range-input")
             input(class="range-min" type="range" min="0" max="10000" value="2500" step="100")
             input(class="range-max" type="range" min="0" max="10000" value="7500" step="100")
+
+mixin dropdown-menu
+    div(class="select")
+        input(class="select__input" type="text" placeholder="дополнительные удобства")
+        img(class="select__img" src=require('/src/images/dropdown-menu-arrow.svg'))
+        div(class="select__dropdown")
+            +checkbox("Завтрак")
+            +checkbox("Письменный стол")
+            +checkbox("Стул для кормления")
+            +checkbox("Кроватка")
+            +checkbox("Телевизор")
+            +checkbox("Шампунь")
+            +checkbox("Телевизор")
+            +checkbox("Шампунь")
+
+mixin dropdown-second
+    div(class="drop")
+        input(class="drop__input" type="text" placeholder="Сколько гостей")
+        img(class="drop__img" src=require('/src/images/dropdown-menu-arrow.svg'))
+        div(class="drop__dropdown")
