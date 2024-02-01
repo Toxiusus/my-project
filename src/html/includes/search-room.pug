@@ -1,6 +1,8 @@
 section(class="search-room")
   div(class="search-room__container container")
     aside(class="aside")
+      +dropdown-second
+      +dropdown-second
       +range-slider
       h3(class="aside__title") правила дома
       +checkbox("Можно курить")
@@ -9,6 +11,7 @@ section(class="search-room")
       h3(class="aside__title") доступность
       +checkbox("Ширина коридоров в номере не менее 91 см.)","Широкий коридор")
       +checkbox("На 1 этаже вас встретит специалист  и проводит до номера.","Помощник для инвалидов")
+      h3(class="aside__title") удобства номера
       +dropdown-second
       +dropdown-menu
     div(class="cards")

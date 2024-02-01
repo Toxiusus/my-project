@@ -11,7 +11,6 @@ mixin inputEmail(imagename)
 
 mixin howManyGuests(firtsname,secondname,thirdname)
     .select-menu
-        +default-textfield("Сколько гостей")
     div(class="guests guests-rooms")
         div(class="guests__box guests-rooms__box")
             p(class="guests__text") #{firtsname}
@@ -235,6 +234,7 @@ mixin dropdown-menu
 
 mixin dropdown-second
     div(class="drop")
-        input(class="drop__input" type="text" placeholder="Сколько гостей")
+        input(class="drop__input" type="text" placeholder="ско")
         img(class="drop__img" src=require('/src/images/dropdown-menu-arrow.svg'))
         div(class="drop__dropdown")
+            +howManyGuests("спальни","кровати","ванные комнаты")
