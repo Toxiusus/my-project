@@ -50,25 +50,7 @@
   }
 }
 
-.guests-rooms {
-  width: 320px;
-  height: auto;
-  // display: none;
 
-  &__active {
-    display: block;
-  }
-
-  &__box {
-    grid-template-columns: 160px 100px;
-    justify-content: space-between;
-  }
-
-  &__btn {
-    margin-top: 15px;
-    margin-bottom: 13px;
-  }
-}
 
 .comfort {
   &__title {
@@ -665,12 +647,11 @@
 }
 
 .wrapper {
-  width: 320px;
   background: var(--light-color);
   border-radius: 4px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.05));
-  display: none;
+  // display: none;
 
   &--visible {
     display: block;
@@ -814,6 +795,7 @@ header .current-date {
   border: 1px solid var(--dark-shade25);
 
   &__box {
+    justify-content: space-between;
     align-items: center;
     display: grid;
     grid-template-columns: auto auto;
@@ -835,10 +817,14 @@ header .current-date {
   }
 
   &__num {
-    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    color: var(--dark-100);
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
-  &__plus {
+  &__increment {
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -853,19 +839,18 @@ header .current-date {
     height: 30px;
   }
 
-  &__minus {
-    margin: 0 auto;
+  &__btns {
+    padding: 20px 7px 13px 14px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    color: rgba(31, 32, 65, 0.5);
-    font-size: 18px;
-    font-weight: 400;
-    border: 1px solid rgb(178, 178, 178);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    color: var(--purple-color);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    text-transform: uppercase;
   }
 }
 

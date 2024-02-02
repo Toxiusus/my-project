@@ -11,28 +11,28 @@ mixin inputEmail(imagename)
 
 mixin howManyGuests(firtsname,secondname,thirdname)
     .select-menu
-    div(class="guests guests-rooms")
-        div(class="guests__box guests-rooms__box")
+    div(class="guests")
+        div(class="guests__box")
             p(class="guests__text") #{firtsname}
             div(class="guests__count")
-                span(class="guests__minus" id="minusAdults") -
+                span(class="guests__increment" id="minusAdults") -
                 span(class="guests__num" id="numAdults") 0
-                span(class="guests__plus" id="plusAdults") +
+                span(class="guests__increment" id="plusAdults") +
         div(class="guests__box guests-rooms__box")
             p(class="guests__text") #{secondname}
             div(class="guests__count")
-                span(class="guests__minus" id="minusChildren") -
+                span(class="guests__increment" id="minusChildren") -
                 span(class="guests__num" id="minusChildren") 0
-                span(class="guests__plus" id="minusChildren") +
+                span(class="guests__increment" id="minusChildren") +
         div(class="guests__box guests-rooms__box")
             p(class="guests__text") #{thirdname}
             div(class="guests__count")
-                span(class="guests__minus" id="minusInfants") -
+                span(class="guests__increment" id="minusInfants") -
                 span(class="guests__num" id="numInfants") 0
-                span(class="guests__plus" id="plusInfants") +
-        div(class="guests-btn guests-rooms__btn")
-            button(class="btn-reset guests-btn__action" id="guestsDelete") очистить
-            button(class="btn-reset guests-btn__action" id="guestsSubmit") применить
+                span(class="guests__increment" id="plusInfants") +
+        div(class="guests__btns guests-rooms__btn")
+            button(class="guests__btn btn-reset" id="guestsDelete") очистить
+            button(class="guests__btn btn-reset" id="guestsSubmit") применить
 
 mixin comfort(name,title,text)
     div(class="comfort")
@@ -232,9 +232,23 @@ mixin dropdown-menu
             +checkbox("Телевизор")
             +checkbox("Шампунь")
 
-mixin dropdown-second
+mixin dropdown-second(place)
     div(class="drop")
-        input(class="drop__input" type="text" placeholder="ско")
+        input(class="drop__input" type="text" placeholder=`${place}`)
         img(class="drop__img" src=require('/src/images/dropdown-menu-arrow.svg'))
-        div(class="drop__dropdown")
+        div(class="drop__dropdown" id="dropdown")
             +howManyGuests("спальни","кровати","ванные комнаты")
+
+mixin dropdown-guests(place)
+    div(class="drop")
+        input(class="drop__input" type="text" placeholder=`${place}`)
+        img(class="drop__img" src=require('/src/images/dropdown-menu-arrow.svg'))
+        div(class="drop__dropdown" id="dropdown")
+            +howManyGuests("взрослые","дети","младенцы")
+
+mixin dropdown-calendar(place)
+    div(class="drop")
+        input(class="drop__input" type="text" placeholder=`${place}`)
+        img(class="drop__img" src=require('/src/images/dropdown-menu-arrow.svg'))
+        div(class="drop__dropdown" id="dropdown")
+            +calendar

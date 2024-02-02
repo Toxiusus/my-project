@@ -1,8 +1,13 @@
-let input = document.querySelector(".drop__input");
-let dropDown = document.querySelector(".drop__dropdown");
-let img = document.querySelector(".drop__img");
+let input = document.querySelectorAll(".drop__input");
 
-input.addEventListener("click", () => {
-    dropDown.classList.toggle("drop__active");
-    img.classList.toggle("drop__img-active")
-})
+input.forEach(element => {
+    element.addEventListener("click",(e) => {
+        let buttonClicked = e.target;
+        let d = buttonClicked.parentElement.children[2];
+        let i = buttonClicked.parentElement.children[1];
+        d.classList.toggle("drop__active");
+        i.classList.toggle("drop__img-active")
+    });
+});
+
+
