@@ -17,6 +17,7 @@ for (let i = 0; i < guestsPlus.length; i++) {
     input.innerHTML = newValue;
 
     getTotal();
+    getComfots();
   })
 }
 
@@ -40,6 +41,7 @@ for (let i = 0; i < guestsMinus.length; i++) {
       input.innerHTML = 0;
     }
     getTotal();
+    getComfots();
   })
 }
 
@@ -63,6 +65,18 @@ function getTotal() {
   }else {
   document.getElementById("howManyGuests").value = total + " гостей";
   }
+}
+
+function getComfots() {
+  let arr = document.querySelectorAll(".guests__comfots");
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if(parseInt(arr[i].innerHTML)) {
+      total += parseInt(arr[i].innerHTML);
+    }
+  }
+
+  document.getElementById("comfort").value = total;
 }
 
 let guestsDelete = document.getElementById("guestsDelete");

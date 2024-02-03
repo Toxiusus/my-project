@@ -15,45 +15,4 @@ include elements
 +bullet-list
 +calendar
 +reviews("user-1","Мурад Сарафанов","Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
-.booking
-    h1 Найдём номера под ваши пожелания
-    .booking__box
-        .booking__start
-            p.booking__text прибытие
-            input(class="booking__input"
-                type="text"
-                placeholder="ДД.ММ.ГГГГ"
-                id="start")
-        .booking__end
-            p.booking__text выезд
-            input(class="booking__input"
-                type="text"
-                placeholder="ДД.ММ.ГГГГ"
-                id="end")
-        .booking__guests
-            p.booking__text
-            input(class="booking__inputguest"
-                type="text"
-                placeholder="Сколько гостей"
-                id="howManyGuests")
-            +button-buy("подобрать номер")
-        .wrapper
-            header
-                p.current-date
-            .icons
-                span(id="prev" class="left" src="../img/calendar-left.png")
-                span(id="prev" class="left" src="../img/calendar-left.png")
-            .calendar
-                ul.weeks
-                    li Пн
-                    li Вт
-                    li Ср
-                    li Чт
-                    li Пт
-                    li Сб
-                    li Вс
-                ul.days
-                    .buttons
-                        button(class="btn__delete btn-reset") очистить
-                        button(class="btn__submit btn-reset") применить
 +range-slider

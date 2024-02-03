@@ -15,22 +15,22 @@ mixin howManyGuests(firtsname,secondname,thirdname)
         div(class="guests__box")
             p(class="guests__text") #{firtsname}
             div(class="guests__count")
-                span(class="guests__increment" id="minusAdults") -
-                span(class="guests__num" id="numAdults") 0
-                span(class="guests__increment" id="plusAdults") +
-        div(class="guests__box guests-rooms__box")
+                span(class="guests__minus guests__increment" id="minusAdults") -
+                span(id="numAdults" class!=attributes.class) 0
+                span(class="guests__plus guests__increment" id="plusAdults") +
+        div(class="guests__box")
             p(class="guests__text") #{secondname}
             div(class="guests__count")
-                span(class="guests__increment" id="minusChildren") -
-                span(class="guests__num" id="minusChildren") 0
-                span(class="guests__increment" id="minusChildren") +
-        div(class="guests__box guests-rooms__box")
+                span(class="guests__minus guests__increment" id="minusChildren") -
+                span(id="minusChildren" class!=attributes.class) 0
+                span(class="guests__plus guests__increment" id="minusChildren") +
+        div(class="guests__box")
             p(class="guests__text") #{thirdname}
             div(class="guests__count")
-                span(class="guests__increment" id="minusInfants") -
-                span(class="guests__num" id="numInfants") 0
-                span(class="guests__increment" id="plusInfants") +
-        div(class="guests__btns guests-rooms__btn")
+                span(class="guests__minus guests__increment" id="minusInfants") -
+                span(id="numInfants" class!=attributes.class) 0
+                span(class="guests__plus guests__increment" id="plusInfants") +
+        div(class="guests__btns")
             button(class="guests__btn btn-reset" id="guestsDelete") очистить
             button(class="guests__btn btn-reset" id="guestsSubmit") применить
 
@@ -182,27 +182,6 @@ mixin registration
                     p(class="reg__text") Уже есть аккаунт на Toxin
                     +button-uncolored("войти")
 
-mixin calendar
-    .wrapper
-        header
-            p.current-date
-        .icons
-            span(id="prev" class="left" src=require('/src/images/Logo.svg') alt='logo')
-            span(id="prev" class="left" src=require('/src/images/Logo.svg') alt='logo')
-        .calendar
-            ul.weeks
-                li Пн
-                li Вт
-                li Ср
-                li Чт
-                li Пт
-                li Сб
-                li Вс
-            ul.days
-                .buttons
-                    button(class="btn__delete btn-reset") очистить
-                    button(class="btn__submit btn-reset") применить
-
 mixin range-slider
     div(class="range-box")
         div(class="price-input flex")
@@ -234,17 +213,17 @@ mixin dropdown-menu
 
 mixin dropdown-second(place)
     div(class="drop")
-        input(class="drop__input" type="text" placeholder=`${place}`)
+        input(class="drop__input" type="text" placeholder=`${place}` id="comfort")
         img(class="drop__img" src=require('/src/images/dropdown-menu-arrow.svg'))
         div(class="drop__dropdown" id="dropdown")
-            +howManyGuests("спальни","кровати","ванные комнаты")
+            +howManyGuests("спальни","кровати","ванные комнаты")(class="guests__comfots")
 
 mixin dropdown-guests(place)
     div(class="drop")
-        input(class="drop__input" type="text" placeholder=`${place}`)
+        input(class="drop__input" type="text" placeholder=`${place}` id="howManyGuests")
         img(class="drop__img" src=require('/src/images/dropdown-menu-arrow.svg'))
         div(class="drop__dropdown" id="dropdown")
-            +howManyGuests("взрослые","дети","младенцы")
+            +howManyGuests("взрослые","дети","младенцы")(class="guests__num")
 
 mixin dropdown-calendar(place)
     div(class="drop")
@@ -252,3 +231,44 @@ mixin dropdown-calendar(place)
         img(class="drop__img" src=require('/src/images/dropdown-menu-arrow.svg'))
         div(class="drop__dropdown" id="dropdown")
             +calendar
+
+mixin booking
+    div(class="booking")
+        h1(class="booking__title") Найдём номера под ваши пожелания
+        div(class="booking__box")
+            div(class="booking__start")
+             p.booking__text прибытие
+                input(class="booking__input"
+                    type="text"
+                    placeholder="ДД.ММ.ГГГГ"
+                    id="start")
+            div(class="booking__end")
+                p.booking__text выезд
+                input(class="booking__input"
+                    type="text"
+                    placeholder="ДД.ММ.ГГГГ"
+                    id="end")
+        +dropdown-guests("сколько гостей")
+        +button-buy("подобрать номер")
+        +calendar
+
+mixin calendar
+    div(class="wrapper")
+        header
+            p.current-date
+        div(class="icons")
+            //- span(id="prev" class="left" src=require('/src/images/Logo.svg') alt='logo')
+            //- span(id="prev" class="left" src=require('/src/images/Logo.svg') alt='logo')
+        .calendar
+            ul.weeks
+                li Пн
+                li Вт
+                li Ср
+                li Чт
+                li Пт
+                li Сб
+                li Вс
+            ul.days
+                .buttons
+                    button(class="btn__delete btn-reset") очистить
+                    button(class="btn__submit btn-reset") применить

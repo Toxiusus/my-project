@@ -1,13 +1,3 @@
-const setListener = (element, type, handler) => {
-    if(!element) {
-      return;
-    }
-    element.addEventListener(type, handler);
-    return() => {
-      element.removeEventListener(type, handler);
-    };
-  }
-  
   const currentDate = document.querySelector(".current-date");
   daysTag = document.querySelector(".days");
   prevNextIcon = document.querySelectorAll(".icons span");
@@ -32,9 +22,9 @@ const setListener = (element, type, handler) => {
   
   const renderCalendar = (chooseInput) => {
       let firstDayofMonth = new Date(currYear, currMonth, 1).getDay();
-      lastDareofMonth = new Date(currYear, currMonth + 1, 0).getDate();
-      lastDayofMonth = new Date(currYear, currMonth, lastDareofMonth).getDay();
-      lastDareofLastMonth = new Date(currYear, currMonth, 0).getDate();
+      let lastDareofMonth = new Date(currYear, currMonth + 1, 0).getDate();
+      let lastDayofMonth = new Date(currYear, currMonth, lastDareofMonth).getDay();
+      let lastDareofLastMonth = new Date(currYear, currMonth, 0).getDate();
       let liTag = "";
   
       for (let i = firstDayofMonth; i > 0; i--) {
@@ -42,7 +32,6 @@ const setListener = (element, type, handler) => {
       }
   
       for (let i = 1; i <= lastDareofMonth; i++) {
-          // let isToday = i === date.getDate() && currMonth === new Date().getMonth() && currYear === new Date().getFullYear() ? chooseInput == "start" ? "active chosen_start":"active chosen_end" : "";
           liTag += `<li class="">${i}</li>`;
       }
   
@@ -97,9 +86,6 @@ const setListener = (element, type, handler) => {
       }
   
       daysLi.forEach(function(li){
-  
-      //  li.classList.remove('active');
-  
        document.getElementById(chooseInput).value = target.innerText + '.' + currMonth + '.' + currYear;
        chosenState[chooseInput].state = 1;
       });
@@ -112,28 +98,28 @@ const setListener = (element, type, handler) => {
   
       chooseInput = 'end';
   
-      btnDelete.addEventListener(('click'),(e) => {
-          target.classList.remove('active');
-          inputStart.value = "";
-          inputEnd.value = "";
-      });
+    //   btnDelete.addEventListener(('click'),(e) => {
+    //       target.classList.remove('active');
+    //       inputStart.value = "";
+    //       inputEnd.value = "";
+    //   });
   }
-  
-  setListener(inputEnd, 'click', e => {
-      chooseInput = 'end';
-      bookingWrapper.classList.add('wrapper--visible');
-  });
-  
-  btnSubmit.addEventListener('click', e => {
-      bookingWrapper.classList.remove('wrapper--visible');
-  });
+inputStart.addEventListener('click', e => {
+    chooseInput = 'start';
+    bookingWrapper.classList.add('wrapper--visible');
+});
+
+inputEnd.addEventListener('click', e => {
+    chooseInput = 'end';
+    bookingWrapper.classList.add('wrapper--visible');
+});
+//   btnSubmit.addEventListener('click', e => {
+//       bookingWrapper.classList.remove('wrapper--visible');
+//   });
   
   const dateBtn = document.querySelector(".date__btn");
   const dateBox = document.querySelector(".date-box");
-  
-  setListener(dateBtn, "click", () => {
+
+  dateBtn.addEventListener("click", () => {
     dateBox.classList.toggle("date-box__active");
   });
-  
-  
-  
