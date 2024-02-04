@@ -1,7 +1,36 @@
 .hero {
-    height: 830px;
-    background-image: url('../images/hero-bg.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  height: 830px;
+  background-image: url('../images/hero-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 440px 370px;
   }
+  &__text {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    grid-column: 1/-1;
+    width: 297px;
+  }
+}
+
+.hero-booking {
+  margin-top: 70px;
+}
+
+.drop-hero {
+  margin: 0 auto;
+
+  &__input {
+    width: 320px;
+  }
+}
+
+.button-hero {
+  margin: 30px auto;
+}

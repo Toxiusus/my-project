@@ -846,8 +846,9 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /*second dropdown*/
+
+
 .drop {
-  margin-top: 30px;
   position: relative;
 
   &__input {
@@ -885,7 +886,6 @@ input[type="range"]::-webkit-slider-thumb {
 /*booking*/
 .booking {
   width: 380px;
-  height: 374px;
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -894,29 +894,19 @@ input[type="range"]::-webkit-slider-thumb {
   position: relative;
   border-radius: 4px;
 
-  &__title{
+  &__title {
     padding: 40px 30px 21px;
   }
 
   &__box {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 0px 30px;
-  }
-
-  &__text {
-    font-size: 12px;
-    text-transform: uppercase;
-    margin: 0;
-    color: var(--dark-shade100);
-    font-weight: 700;
+    gap: 20px;
   }
 
   &__input {
     padding: 12px 45px 12px 15px;
-    width: 150px;
-    height: 44px;
-    outline: none;
   }
 
   &__guests {
