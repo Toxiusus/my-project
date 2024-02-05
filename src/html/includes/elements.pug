@@ -10,7 +10,7 @@ mixin inputEmail(imagename)
 
 
 mixin howManyGuests(firtsname,secondname,thirdname)
-    .select-menu
+    div(class="select-menu")
     div(class="guests")
         div(class="guests__box")
             p(class="guests__text") #{firtsname}
@@ -33,6 +33,28 @@ mixin howManyGuests(firtsname,secondname,thirdname)
         div(class="guests__btns")
             button(class="guests__btn btn-reset" id="guestsDelete") очистить
             button(class="guests__btn btn-reset" id="guestsSubmit") применить
+
+mixin howManyComfort(firtsname,secondname,thirdname)
+    div(class="select-menu")
+    div(class="guests")
+        div(class="guests__box")
+            p(class="guests__text") #{firtsname}
+            div(class="guests__count")
+                span(class="guests__minus guests__increment" id="minusAdults") -
+                span(id="numAdults" class!=attributes.class) 0
+                span(class="guests__plus guests__increment" id="plusAdults") +
+        div(class="guests__box")
+            p(class="guests__text") #{secondname}
+            div(class="guests__count")
+                span(class="guests__minus guests__increment" id="minusChildren") -
+                span(id="minusChildren" class!=attributes.class) 0
+                span(class="guests__plus guests__increment" id="minusChildren") +
+        div(class="guests__box")
+            p(class="guests__text") #{thirdname}
+            div(class="guests__count")
+                span(class="guests__minus guests__increment" id="minusInfants") -
+                span(id="numInfants" class!=attributes.class) 0
+                span(class="guests__plus guests__increment" id="plusInfants") +
 
 mixin comfort(name,title,text)
     div(class="comfort")
@@ -114,7 +136,7 @@ mixin bullet-list
             p(class="bullet-list__text") Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
 mixin pagination(name)
-    div(class="pagination flex")
+    div(class="pagination")
         div(class="pagination__links flex")
             a(class="pagination__link pagination__link-active" href="") 1
             a(class="pagination__link" href="") 2
@@ -216,21 +238,21 @@ mixin dropdown-second(place)
         input(class="drop__input" type="text" placeholder=`${place}` id="comfort")
         img(class="drop__img" src=require('/src/images/dropdown-menu-arrow.svg'))
         div(class="drop__dropdown" id="dropdown")
-            +howManyGuests("спальни","кровати","ванные комнаты")(class="guests__comfots")
+            +howManyComfort("спальни","кровати","ванные комнаты")(class="guests__comfots")
 
 mixin dropdown-guests(place)
     div(class="drop" class!=attributes.class)
-        input(class="drop__input" class!=attributes.class type="text" placeholder=`${place}` id="howManyGuests")
+        input(class="drop__input" class!=attributes.class type="text" placeholder=`${place}` id="howManyGuests" value)
         img(class="drop__img" src=require('/src/images/dropdown-menu-arrow.svg'))
         div(class="drop__dropdown" id="dropdown")
             +howManyGuests("взрослые","дети","младенцы")(class="guests__num")
 
-mixin dropdown-calendar(place)
+mixin dropdown-calendar(place,id)
     div(class="drop")
         input(class="drop__input" type="text" placeholder=`${place}`)
         img(class="drop__img" src=require('/src/images/dropdown-menu-arrow.svg'))
         div(class="drop__dropdown" id="dropdown")
-            +calendar
+            +calendar(class="wrapper-active")
 
 mixin booking
     div(class="booking" class!=attributes.class)
@@ -248,7 +270,7 @@ mixin booking
         +calendar
 
 mixin calendar
-    div(class="wrapper")
+    div(class="wrapper" class!=attributes.class)
         header
             p.current-date
         div(class="icons")
@@ -264,6 +286,43 @@ mixin calendar
                 li Сб
                 li Вс
             ul.days
-                .buttons
-                    button(class="btn__delete btn-reset") очистить
-                    button(class="btn__submit btn-reset") применить
+            .buttons
+                button(class="btn__delete btn-reset") очистить
+                button(class="btn__submit btn-reset") применить
+
+mixin room-booking
+    div(class="booking" class!=attributes.class)
+        div(class="booking__titles flex")
+            div(class="booking__nomer flex")
+                span(class="booking__span flex")
+                    p(class="booking__no") № 
+                    p(class="booking__number") 888
+                    p(class="booking__luxe") люкс
+            div(class="booking__nomer flex")
+                p(class="booking__how") 9 990₽ 
+                p(class="booking__day") в сутки
+        div(class="booking__box")
+            div(class="booking__start")
+                h3(class="booking__text") прибытие
+                +default-textfield("ДД.ММ.ГГГГ","start")(class="booking__input")
+            div(class="booking__end")
+                h3(class="booking__text") выезд
+                +default-textfield("ДД.ММ.ГГГГ","end")(class="booking__input")
+            +calendar
+            h3(class="booking__text") гости
+        +dropdown-guests("Сколько гостей")(class="drop-hero")(class="drop-hero__input")
+        div(class="booking__prices")
+            div(class="booking__full")
+                div(class="booking__price flex")
+                    p(class="booking__count") 9 990₽ х 4 суток
+                    P(class="booking__count") 39 960₽
+                div(class="booking__price flex")
+                    p(class="booking__count") Сбор за услуги: скидка 2 179₽
+                    P(class="booking__count") 0₽
+                div(class="booking__price flex")
+                    p(class="booking__count") Сбор за дополнительные услуги
+                    P(class="booking__count") 300₽
+            div(class="booking__total flex")
+                p(class="booking__totaltext") Итого
+                P(class="booking__totaltext") 38 081₽
+        +button-buy("подобрать номер")(class="button-hero")

@@ -94,15 +94,15 @@
   
       target.classList.add(curClass);
   
-      inputEnd.focus();
+    //   inputEnd.focus();
   
       chooseInput = 'end';
   
-    //   btnDelete.addEventListener(('click'),(e) => {
-    //       target.classList.remove('active');
-    //       inputStart.value = "";
-    //       inputEnd.value = "";
-    //   });
+      btnDelete.addEventListener(('click'),(e) => {
+          target.classList.remove('active');
+          inputStart.value = "";
+          inputEnd.value = "";
+      });
   }
 inputStart.addEventListener('click', e => {
     chooseInput = 'start';
@@ -113,9 +113,9 @@ inputEnd.addEventListener('click', e => {
     chooseInput = 'end';
     bookingWrapper.classList.add('wrapper--visible');
 });
-//   btnSubmit.addEventListener('click', e => {
-//       bookingWrapper.classList.remove('wrapper--visible');
-//   });
+  btnSubmit.addEventListener('click', e => {
+      bookingWrapper.classList.remove('wrapper--visible');
+  });
   
   const dateBtn = document.querySelector(".date__btn");
   const dateBox = document.querySelector(".date-box");

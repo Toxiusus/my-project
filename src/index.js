@@ -17,4 +17,4 @@ import "./js/checkbox";
 import "./js/guests";
 import "./js/range-slider";
 import "./js/like";
-// import "./js/calendar";
+import "./js/calendar";
