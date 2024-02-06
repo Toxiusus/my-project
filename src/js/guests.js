@@ -4,7 +4,7 @@ let guestsMinus = document.querySelectorAll(".guests__minus");
 for (let i = 0; i < guestsPlus.length; i++) {
   let button = guestsPlus[i];
 
-  button.addEventListener("click",function(event) {
+  button.addEventListener("click", function (event) {
 
     let buttonClicked = event.target;
 
@@ -23,7 +23,7 @@ for (let i = 0; i < guestsPlus.length; i++) {
 
 for (let i = 0; i < guestsMinus.length; i++) {
   let button = guestsMinus[i];
-  button.addEventListener("click",function(event) {
+  button.addEventListener("click", function (event) {
 
     let buttonClicked = event.target;
 
@@ -35,9 +35,9 @@ for (let i = 0; i < guestsMinus.length; i++) {
 
     input.innerHTML = newValue;
 
-    if(newValue >= 0) {
+    if (newValue >= 0) {
       input.innerHTML = newValue;
-    }else {
+    } else {
       input.innerHTML = 0;
     }
     getTotal();
@@ -49,39 +49,41 @@ function getTotal() {
   let arr = document.querySelectorAll(".guests__num");
   let total = 0;
   for (let i = 0; i < arr.length; i++) {
-    if(parseInt(arr[i].innerHTML)) {
+    if (parseInt(arr[i].innerHTML)) {
       total += parseInt(arr[i].innerHTML);
     }
   }
 
   document.getElementById("howManyGuests").value = total;
 
-  if(document.getElementById("howManyGuests").value = total <= 0){
+  if (document.getElementById("howManyGuests").value = total <= 0) {
     document.getElementById("howManyGuests").value = total + "";
-  }else if(document.getElementById("howManyGuests").value = total === 1) {
-   document.getElementById("howManyGuests").value = total + " гость";
-  }else if (document.getElementById("howManyGuests").value = total <= 4) {
-  document.getElementById("howManyGuests").value = total + " гостя";
-  }else {
-  document.getElementById("howManyGuests").value = total + " гостей";
+  } else if (document.getElementById("howManyGuests").value = total === 1) {
+    document.getElementById("howManyGuests").value = total + " гость";
+  } else if (document.getElementById("howManyGuests").value = total <= 4) {
+    document.getElementById("howManyGuests").value = total + " гостя";
+  } else {
+    document.getElementById("howManyGuests").value = total + " гостей";
   }
 }
 
-function getComfots() {
-  let arr = document.querySelectorAll(".guests__comfots");
-  let total = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if(parseInt(arr[i].innerHTML)) {
-      total += parseInt(arr[i].innerHTML);
+if (document.getElementById("comfort")) {
+  function getComfots() {
+    let arr = document.querySelectorAll(".guests__comfots");
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (parseInt(arr[i].innerHTML)) {
+        total += parseInt(arr[i].innerHTML);
+      }
     }
-  }
 
-  document.getElementById("comfort").value = total;
+    document.getElementById("comfort").value = total;
+  }
 }
 
 let guestsDelete = document.getElementById("guestsDelete");
 
-guestsDelete.addEventListener("click",function deleteGuests() {
+guestsDelete.addEventListener("click", function deleteGuests() {
 
   document.getElementById("howManyGuests").value = 0;
 

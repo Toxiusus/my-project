@@ -13,6 +13,20 @@
   }
 }
 
+.aside {
+  &__title {
+    margin-bottom: 5px;
+  }
+  &__drop-title{
+    margin-bottom: 17px;
+  }
+}
+.aside-checkbox{
+  margin-bottom: 30px;
+}
+.drop-calendar{
+  margin-bottom: 20px;
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

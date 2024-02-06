@@ -218,6 +218,7 @@ mixin range-slider
         div(class="range-input")
             input(class="range-min" type="range" min="0" max="10000" value="2500" step="100")
             input(class="range-max" type="range" min="0" max="10000" value="7500" step="100")
+            p(class="range-input__text") Стоимость за сутки пребывания в номере
 
 mixin dropdown-menu
     div(class="select")
@@ -248,8 +249,8 @@ mixin dropdown-guests(place)
             +howManyGuests("взрослые","дети","младенцы")(class="guests__num")
 
 mixin dropdown-calendar(place,id)
-    div(class="drop")
-        input(class="drop__input" type="text" placeholder=`${place}`)
+    div(class="drop" class!=attributes.class)
+        input(class="drop__input" type="text" placeholder=`${place}` id="drop-calendar")
         img(class="drop__img" src=require('/src/images/dropdown-menu-arrow.svg'))
         div(class="drop__dropdown" id="dropdown")
             +calendar(class="wrapper-active")
