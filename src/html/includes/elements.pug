@@ -1,6 +1,6 @@
 mixin default-textfield(name,id)
     div(class="default-textfield")
-        input(class="default-textfield__input input-reset reg__input" class!=attributes.class placeholder=`${name}` type="text" id=`${id}`)
+        input(class="default-textfield__input input-reset" class!=attributes.class placeholder=`${name}` type="text" id=`${id}`)
 
 mixin inputEmail(imagename)
     div(class="default-textfield")
@@ -63,18 +63,6 @@ mixin comfort(name,title,text)
             p(class="comfort__uptitle") #{title}
             p(class="comfort__text") #{text}
 
-mixin button-colored(text)
-    button(class="button-colored btn-reset")
-        span(class="button-colored__text") #{text}
-
-mixin button-uncolored(text)
-    button(class="button-uncolored btn-reset")
-        span(class="button-uncolored__text") #{text}
-
-mixin button-buy(text)
-    button(class="button-buy btn-reset reg__button" class!=attributes.class)
-        span(class="button-buy__text") #{text}
-
 mixin radio
     div(class="radio")
         label(class="radio__label") 
@@ -93,16 +81,7 @@ mixin toggle
             span(class="toggle__span")
             p(class="toggle__text") Получать спецпредложения
 
-mixin checkbox(text,title)
-    div(class="col")
-        div(class="row")
-            label(class="checkbox flex")
-                input( class="checkbox__input" type="checkbox")
-                span(class="checkbox__checkmark")
-                    img(class="checkbox-icon" src=require('/src/images/checkmark.svg'))
-                div(class="checkbox__wrap")
-                    span(class="checkbox__title") #{title}
-                    span(class="checkbox__label") #{text}
+
 
 mixin like
     div(class="like")
@@ -174,51 +153,33 @@ mixin room-card(imagename,number,luxury,price,numofrev)
                 span(class="room-card__reviews") Отзывов 
 
 mixin sign-in
-    section(class="login")
-        div(class="login__inner container")
-            form(class="form")
-                h1(class="form__main-title") Войти
-                +default-textfield("Email")
-                +default-textfield("Пароль")
-                +button-buy("войти")
-                div(class="form__box flex")
-                    p(class="form__text") Нет аккаунта на Toxin?
-                    +button-uncolored("создать")
+    form(class="sign-in")
+        h1(class="sign-in__main-title") Войти
+        +default-textfield("Email")(class="sign-in__input")
+        +default-textfield("Пароль")(class="sign-in__inputlast")
+        +button-buy("войти")(class="sign-in__button")
+        div(class="sign-in__box flex")
+            p(class="sign-in__text") Нет аккаунта на Toxin?
+            +button-uncolored("создать")
 
 mixin registration
-    section(class="registration")
-        div(class="registration__inner container")
-            form(class="reg")
-                h1(class="reg__main-title") Регистрация аккаунта
-                +default-textfield("Имя")
-                +default-textfield("Фамилия")
-                +radio
-                h3(class="reg__title") дата рождения
-                +default-textfield("ДД.ММ.ГГГГ")
-                h3(class="reg__title") данные для входа в сервис
-                +default-textfield("Email")
-                +default-textfield("Пароль")
-                +toggle
-                +button-buy("зарегистрироваться")
-                div(class="reg__box flex")
-                    p(class="reg__text") Уже есть аккаунт на Toxin
-                    +button-uncolored("войти")
+    form(class="reg")
+        h1(class="reg__main-title") Регистрация аккаунта
+        +default-textfield("Имя")(class="reg__input")
+        +default-textfield("Фамилия")(class="reg__input")
+        +radio
+        h3(class="reg__title") дата рождения
+        +default-textfield("ДД.ММ.ГГГГ")(class="reg__input-birth")
+        h3(class="reg__title") данные для входа в сервис
+        +default-textfield("Email")(class="reg__input")
+        +default-textfield("Пароль")(class="reg__input")
+        +toggle
+        +button-buy("зарегистрироваться")(class="reg__button")
+        div(class="reg__box flex")
+            p(class="reg__text") Уже есть аккаунт на Toxin
+            +button-uncolored("войти")
 
-mixin range-slider
-    div(class="range-box")
-        div(class="price-input flex")
-            h3(class="price-input__title") диапазон цены
-            div(class="field")
-                input(class="input-min" type="number" value="2500")
-            div(class="separator") -
-            div(class="field")
-                input(class="input-max" type="number" value="7500")
-        div(class="slider")
-            div(class="progress")
-        div(class="range-input")
-            input(class="range-min" type="range" min="0" max="10000" value="2500" step="100")
-            input(class="range-max" type="range" min="0" max="10000" value="7500" step="100")
-            p(class="range-input__text") Стоимость за сутки пребывания в номере
+
 
 mixin dropdown-menu
     div(class="select")
@@ -257,7 +218,7 @@ mixin dropdown-calendar(place,id)
 
 mixin booking
     div(class="booking" class!=attributes.class)
-        h1(class="booking__title") Найдём номера под ваши пожелания
+        h1 Найдём номера под ваши пожелания
         div(class="booking__box")
             div(class="booking__start")
                 h3(class="booking__text") прибытие
@@ -267,8 +228,7 @@ mixin booking
                 +default-textfield("ДД.ММ.ГГГГ","end")(class="booking__input")
             h3(class="booking__text") гости
         +dropdown-guests("Сколько гостей")(class="drop-hero")(class="drop-hero__input")
-        +button-buy("подобрать номер")(class="button-hero")
-        +calendar
+        +button({span:"подобрать номер", size:"stretching"},"a","sign-in.pug")
 
 mixin calendar
     div(class="wrapper" class!=attributes.class)

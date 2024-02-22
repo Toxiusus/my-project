@@ -1,0 +1,24 @@
+include ../../components/button/button.pug
+
+include elements
+header(class='header')
+  div(class="header__body")
+    div(class="header__container flex")
+      a(class='header__link')
+        img(src=require('/src/images/Logo.svg') alt='logo')
+      nav(class="nav" title="Main navigation")
+        ul(class="nav__list list-reset flex")
+          li(class="nav__item")
+            a(href="#" class="nav__link nav__link-active") О нас
+          li(class="nav__item")
+            a(href="#" class="nav__link") Услуги
+          li(class="nav__item")
+            a(href="#" class="nav__link") Вакансии
+          li(class="nav__item")
+            a(href="#" class="nav__link") Новости
+          li(class="nav__item")
+            a(href="#" class="nav__link") Соглашения
+          li(class="nav__item")
+            +button({span:"войти", size:"small"},"a","sign-in.pug")
+          li(class="nav__item")
+            +button({span:"зарегистрироваться", size:"large"},"a","sign-in.pug")

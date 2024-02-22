@@ -1,0 +1,15 @@
+mixin range-slider
+    div(class="range-box")
+        div(class="price-input flex")
+            h3(class="price-input__title") диапазон цены
+            div(class="field")
+                input(class="input-min" type="number" value="2500")
+            div(class="separator") -
+            div(class="field")
+                input(class="input-max" type="number" value="7500")
+        div(class="slider")
+            div(class="progress")
+        div(class="range-input")
+            input(class="range-min" type="range" min="0" max="10000" value="2500" step="100")
+            input(class="range-max" type="range" min="0" max="10000" value="7500" step="100")
+            p(class="range-input__text") Стоимость за сутки пребывания в номере

@@ -101,8 +101,6 @@ function showDate(evt) {
 
     target.classList.add(curClass);
 
-    // inputEnd.focus();
-
     chooseInput = 'end';
 
     btnDelete.addEventListener(('click'), (e) => {

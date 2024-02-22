@@ -1,0 +1,15 @@
+mixin button(options,tag,href)
+  -
+    let spanName = "span"
+    const {
+      size="",
+        } =  options
+
+    const sizeMode = {
+      small: "button-small",
+      large: "button-large",
+      stretching: "button-stretching" 
+    }
+
+  #{tag}(class="btn-reset" class=[sizeMode[size]] href=href)
+    span()=options.span

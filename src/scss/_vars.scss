@@ -2,7 +2,7 @@
   --font-family: "MontserratRegular", sans-serif;
   --second-family: "MontserratBold", sans-serif;
   --content-width: 1160px;
-  --container-offset: 15px;
+  --container-offset: 13.5px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   --main-size: 14px;
@@ -19,4 +19,65 @@
   --primary-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   --green-color: #6FCF97;
   --primary-second: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+
+//new root
+  --mainTextColor: #1f2041;
+  --dark75: rgba(31, 32, 65, 0.75);
+  --dark50: rgba(31, 32, 65, 0.5);
+  --dark25: rgba(31, 32, 65, 0.25);
+  --dark5: rgba(31, 32, 65, 0.05);
+  --designColor_main: #bc9cff;
+  --designColor_second: #6fcf97;
+  --mainGradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  --secondGradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  --mainGradientTransparent: linear-gradient(
+    180deg,
+    rgba(#bc9cff, 0.5) 0%,
+    rgba(#8ba4f9, 0.5) 100%
+  );
+  --mainGradientTransparent_25: linear-gradient(
+    180deg,
+    rgba(#bc9cff, 0.25) 0%,
+    rgba(#8ba4f9, 0.25) 100%
+  );
+  --gradientForShadow: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 99.99%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  --sumptuouslyRatingGradient: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+  --goodRatingGradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  --satisfactorilyRatingGradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  --badRatingGradient: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+
+  --arrowColorCarousel: #fff;
+  --dotsBorderCarousel: 1px solid #fff;
+
+  --mainBoxShadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  --avatarBoxShadow: 0 10px 20px rgba(31, 32, 65, 0.1);
+  --headerFooterBoxShadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  --infoIconBoxShadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  --mainBorderRadius: 4px;
+  --cardsBorderRadius: 4px;
+  --cardsBackground: #fff;
+  --uiKitPagesBackground: #e5e5e5;
+
+  // fonts
+  --mainFont: montserrat, arial, sans-serif;
+  --mainFont_size: 14px;
+
+  --inputHeight: 44px;
+  --inputWidthSizeL: 320px;
+  --inputWidthSizeM: 266px;
+  --inputWidthSizeS: 150px;
+
+  //  borders
+  --mainBorder: 1px solid rgba(31, 32, 65, 0.25);
+  --colorBorder: 1px solid --designColor_main;
+  --focusBorder: 1px solid rgba(31, 32, 65, 0.5);
+  --cardsBorder: 1px solid rgba(0, 0, 0, 0.12);
+  --avatarBorder: 2px solid #fff;
+  --infoIconBorder: 1px solid rgba(0, 0, 0, 0.12);
 }

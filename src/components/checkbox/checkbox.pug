@@ -1,0 +1,10 @@
+mixin checkbox(text,title)
+    div(class="col")
+        div(class="row")
+            label(class="checkbox flex")
+                input( class="checkbox__input" type="checkbox")
+                span(class="checkbox__checkmark")
+                    img(class="checkbox-icon" src=require('/src/images/checkmark.svg'))
+                div(class="checkbox__wrap")
+                    span(class="checkbox__title") #{title}
+                    span(class="checkbox__label") #{text}

@@ -12,5 +12,12 @@ input.forEach(element => {
         if(!bookingWrapper){
             bookingWrapper.classList.add('wrapper-active');
         }
+        guestsSubmit.addEventListener('click', () => {
+            d.classList.remove("drop__active");
+            i.classList.remove("drop__img-active")
+        });
     });
 });
+
+let guestsSubmit = document.getElementById("guestsSubmit");
+

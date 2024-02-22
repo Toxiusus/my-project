@@ -17,7 +17,10 @@ for (let i = 0; i < guestsPlus.length; i++) {
     input.innerHTML = newValue;
 
     getTotal();
-    getComfots();
+
+    if(document.getElementById("comfort")){
+      getComforts();
+    }
   })
 }
 
@@ -40,8 +43,12 @@ for (let i = 0; i < guestsMinus.length; i++) {
     } else {
       input.innerHTML = 0;
     }
+    
     getTotal();
-    getComfots();
+
+    if(document.getElementById("comfort")){
+      getComforts();
+    }
   })
 }
 
@@ -68,7 +75,7 @@ function getTotal() {
 }
 
 if (document.getElementById("comfort")) {
-  function getComfots() {
+  function getComforts() {
     let arr = document.querySelectorAll(".guests__comfots");
     let total = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -92,4 +99,4 @@ guestsDelete.addEventListener("click", function deleteGuests() {
   for (let i = 0; i < arr.length; i++) {
     arr[i].innerHTML = 0;
   }
-})
+});
