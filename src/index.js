@@ -15,6 +15,7 @@ import './components/pagination/pagination.scss';
 import './components/bullet-list/bullet-list.scss';
 import './components/degnities/degnities.scss';
 import './components/like/like.scss';
+import './components/room-card/room-card.scss';
 import './components/rating/rating.scss';
 import './components/toggle/toggle.scss';
 import './components/radio/radio.scss';

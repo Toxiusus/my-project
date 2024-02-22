@@ -60,33 +60,6 @@ mixin howManyComfort(firtsname,secondname,thirdname)
 
 
 
-
-
-
-
-
-
-
-mixin room-card(imagename,number,luxury,price,numofrev)
-    div(class="room-card")
-        img.src(class="comfort__img" src=require(`../src/images/${imagename}.jpg`))
-        div(class="room-card__info flex")
-            p(class="room-card__num") №
-                span(class="room-card__number") #{number}
-                span(class="room-card__luxury") #{luxury}
-            p(class="room-card__price") #{price}
-                span(class="room-card__day") в сутки
-        div(class="room-card__rating flex")
-            +rating
-            p(class="room-card__numofrev") #{numofrev}
-                span(class="room-card__reviews") Отзывов 
-
-
-
-
-
-
-
 mixin dropdown-menu
     div(class="select")
         input(class="select__input" type="text" placeholder="дополнительные удобства")
