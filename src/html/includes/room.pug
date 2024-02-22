@@ -1,4 +1,10 @@
+include ../../components/button/button.pug
+include ../../components/bullet-list/bullet-list.pug
+include ../../components/degnities/degnities.pug
+include ../../components/like/like.pug
+include ../../components/reviews/reviews.pug
 include elements
+
 section(class="room")
   div(class="room__content")
     div(class="room__images")
@@ -10,9 +16,9 @@ section(class="room")
         div(class="room-about")
           div(class="comfort")
             h2(class="comfort__title") Сведения о номере
-            +comfort("smile","Комфорт","Шумопоглощающие стены")
-            +comfort("city","Удобство","Окно в каждой из спален")
-            +comfort("hot","Уют","Номер оснащён камином")
+            +degnities("smile","Комфорт","Шумопоглощающие стены")
+            +degnities("city","Удобство","Окно в каждой из спален")
+            +degnities("hot","Уют","Номер оснащён камином")
           div(class="impressions")
             h2(class="impressions__title") Впечатления от номера
             div(class="impressions__content")
@@ -32,4 +38,4 @@ section(class="room")
           +reviews("user-2","Патрисия Стёклышкова","Обслуживание на высоте!   Всё     аккуратно, чисто. Завтраки в номер советую заказать, каждый   день новое    блюдо и десерт как комплимент")
         +bullet-list
       div(class="room__booking")
-        +room-booking
+        //- +room-booking

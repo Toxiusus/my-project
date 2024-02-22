@@ -1,0 +1,7 @@
+mixin sign-in
+    form(class="sign-in")
+        h1(class="sign-in__main-title") Войти
+        +default-textfield("Email")(class="sign-in__input")
+        +default-textfield("Пароль")(class="sign-in__inputlast")
+        div(class="sign-in__box flex")
+            p(class="sign-in__text") Нет аккаунта на Toxin?

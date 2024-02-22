@@ -56,12 +56,7 @@ mixin howManyComfort(firtsname,secondname,thirdname)
                 span(id="numInfants" class!=attributes.class) 0
                 span(class="guests__plus guests__increment" id="plusInfants") +
 
-mixin comfort(name,title,text)
-    div(class="comfort")
-        div(class="comfort__box")
-            img.src(class="comfort__img" src=require(`../src/images/${name}.svg`) alt=name)
-            p(class="comfort__uptitle") #{title}
-            p(class="comfort__text") #{text}
+
 
 mixin radio
     div(class="radio")
@@ -83,11 +78,7 @@ mixin toggle
 
 
 
-mixin like
-    div(class="like")
-        div(class="like__content")
-            span(class="like__img")
-            span(class="like__num") 2
+
 
 mixin rating
     div(class="rating")
@@ -103,41 +94,6 @@ mixin rating
             input(class="rating__item" name="rating" type="radio" value="1" id="rating__1")
             label(class="rating__label" for="rating__1")
 
-mixin bullet-list
-    div(class="bullet-list container")
-        div(class="bullet-list__content")
-            h2(class="bullet-list__title") Правила
-            p(class="bullet-list__text bullet-list__textdot") Нельзя с питомцами
-            p(class="bullet-list__text bullet-list__textdot") Без вечеринок и мероприятий
-            p(class="bullet-list__text bullet-list__textdot") Время прибытия — после 13:00, а выезд до 12:00
-        div(class="bullet-list__content")
-            h2(class="bullet-list__title") Отмена
-            p(class="bullet-list__text") Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-
-mixin pagination(name)
-    div(class="pagination")
-        div(class="pagination__links flex")
-            a(class="pagination__link pagination__link-active" href="") 1
-            a(class="pagination__link" href="") 2
-            a(class="pagination__link" href="") 3
-            a(class="pagination__link" href="") ...
-            a(class="pagination__link" href="") 15
-            a(class="pagination__link-forward" href="#")
-                img.src(src=require(`../src/images/${name}.svg`))
-        div(class="pagination__box")
-            p(class="pagination__text") 1 – 12 из 100+ вариантов аренды
-
-mixin reviews(name,username,comment)
-    div(class="reviews__box")
-        div(class="reviews__content")
-            div(class="reviews__userbox")
-                img.src(class="reviews__img" src=require(`../src/images/${name}.png`))
-                p( class="reviews__name") #{username}
-                p(class="reviews__days") 5 дней назад
-            div(class="reviews__commentsbox")
-                +like
-                p(class="reviews__comment") #{comment}
-
 mixin room-card(imagename,number,luxury,price,numofrev)
     div(class="room-card")
         img.src(class="comfort__img" src=require(`../src/images/${imagename}.jpg`))
@@ -152,15 +108,7 @@ mixin room-card(imagename,number,luxury,price,numofrev)
             p(class="room-card__numofrev") #{numofrev}
                 span(class="room-card__reviews") Отзывов 
 
-mixin sign-in
-    form(class="sign-in")
-        h1(class="sign-in__main-title") Войти
-        +default-textfield("Email")(class="sign-in__input")
-        +default-textfield("Пароль")(class="sign-in__inputlast")
-        +button-buy("войти")(class="sign-in__button")
-        div(class="sign-in__box flex")
-            p(class="sign-in__text") Нет аккаунта на Toxin?
-            +button-uncolored("создать")
+
 
 mixin registration
     form(class="reg")

@@ -1,0 +1,31 @@
+.degnities {
+    &__title {
+      margin-bottom: 20px;
+    }
+  
+    &__box {
+      display: grid;
+      grid-template-columns: 50px 210px;
+      width: 280px;
+      padding-bottom: 17px;
+      margin-bottom: 23px;
+      border-bottom: 1px solid var(--dark-10, rgba(31, 32, 65, 0.1));
+    }
+  
+    &__img {
+      grid-row: 1/3;
+    }
+  
+    &__uptitle {
+      color: var(--dark-shade75);
+      font-family: var(--second-family);
+      font-weight: 700;
+      line-height: 24px;
+    }
+  
+    &__text {
+      color: var(--dark-shade75);
+      line-height: 24px;
+    }
+  }
+  

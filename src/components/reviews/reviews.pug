@@ -1,0 +1,10 @@
+mixin reviews(name,username,comment)
+    div(class="reviews__box")
+        div(class="reviews__content")
+            div(class="reviews__userbox")
+                img.src(class="reviews__img" src=require(`../src/images/${name}.png`))
+                p( class="reviews__name") #{username}
+                p(class="reviews__days") 5 дней назад
+            div(class="reviews__commentsbox")
+                +like
+                p(class="reviews__comment") #{comment}

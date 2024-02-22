@@ -1,5 +1,4 @@
 import './scss/main.scss';
-import './scss/_header.scss';
 import './scss/_footer.scss';
 import './scss/_vars.scss';
 import './scss/_hero.scss';
@@ -14,6 +13,12 @@ import './scss/_registration.scss';
 import './components/button/button.scss';
 import './components/checkbox/checkbox.scss';
 import './components/range-slider/range-slider.scss';
+import './components/pagination/pagination.scss';
+import './components/bullet-list/bullet-list.scss';
+import './components/degnities/degnities.scss';
+import './components/like/like.scss';
+import './components/reviews/reviews.scss';
+import './components/header/header.scss';
 import "./js/dropdown";
 import "./js/second-dropdown";
 import "./js/checkbox";

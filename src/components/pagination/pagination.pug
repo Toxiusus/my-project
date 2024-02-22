@@ -1,0 +1,12 @@
+mixin pagination(name)
+    div(class="pagination")
+        div(class="pagination__links flex")
+            a(class="pagination__link pagination__link-active" href="") 1
+            a(class="pagination__link" href="") 2
+            a(class="pagination__link" href="") 3
+            a(class="pagination__link" href="") ...
+            a(class="pagination__link" href="") 15
+            a(class="pagination__link-forward" href="#")
+                img.src(src=require(`../src/images/${name}.svg`))
+        div(class="pagination__box")
+            p(class="pagination__text") 1 – 12 из 100+ вариантов аренды
