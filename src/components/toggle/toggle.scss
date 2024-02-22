@@ -1,0 +1,64 @@
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    margin-bottom: 20px;
+  
+    &__label {
+      display: block;
+    }
+  
+    &__input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+  
+    &__text {
+      color: var(--dark-75, rgba(31, 32, 65, 0.75));
+      padding-left: 50px;
+    }
+  
+    &__span {
+      position: absolute;
+  
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 20px;
+        border-radius: 10px;
+        border: 1px solid var(--dark-25, rgba(31, 32, 65, 0.25));
+        background-color: #fff;
+        transition: border .3s;
+      }
+  
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        background-color: var(--dark-25, rgba(31, 32, 65, 0.25));
+        left: 4px;
+        top: 4px;
+        transition: background-color .3s, left .3s;
+      }
+    }
+  }
+  
+  .toggle__input:checked+.toggle__span::before {
+    border: 1px solid var(--Primary-Color, #BC9CFF);
+  }
+  
+  .toggle__input:checked+.toggle__span::after {
+    background-color: var(--Primary-Color, #BC9CFF);
+    left: 24px;
+  }
+  

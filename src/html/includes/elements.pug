@@ -58,41 +58,14 @@ mixin howManyComfort(firtsname,secondname,thirdname)
 
 
 
-mixin radio
-    div(class="radio")
-        label(class="radio__label") 
-            input(class="radio__input" type="radio" name="rd" checked)
-            span(class="radio__span")
-            p(class="radio__text") Мужчина
-        label(class="radio__label")
-            input(class="radio__input" type="radio" name="rd")
-            span(class="radio__span")
-            p(class="radio__text") Женщина
-
-mixin toggle
-    div(class="toggle")
-        label(class="toggle__label" for="toggle")
-            input(class="toggle__input" type="checkbox" id="toggle")
-            span(class="toggle__span")
-            p(class="toggle__text") Получать спецпредложения
 
 
 
 
 
-mixin rating
-    div(class="rating")
-        div(class="rating__items flex")
-            input(class="rating__item" name="rating" type="radio" value="5" id="rating__5")
-            label(class="rating__label" for="rating__5")
-            input(class="rating__item" name="rating" type="radio" value="4" id="rating__4")
-            label(class="rating__label" for="rating__4")
-            input(class="rating__item" name="rating" type="radio" value="3" id="rating__3")
-            label(class="rating__label" for="rating__3")
-            input(class="rating__item" name="rating" type="radio" value="2" id="rating__2")
-            label(class="rating__label" for="rating__2")
-            input(class="rating__item" name="rating" type="radio" value="1" id="rating__1")
-            label(class="rating__label" for="rating__1")
+
+
+
 
 mixin room-card(imagename,number,luxury,price,numofrev)
     div(class="room-card")
@@ -110,22 +83,7 @@ mixin room-card(imagename,number,luxury,price,numofrev)
 
 
 
-mixin registration
-    form(class="reg")
-        h1(class="reg__main-title") Регистрация аккаунта
-        +default-textfield("Имя")(class="reg__input")
-        +default-textfield("Фамилия")(class="reg__input")
-        +radio
-        h3(class="reg__title") дата рождения
-        +default-textfield("ДД.ММ.ГГГГ")(class="reg__input-birth")
-        h3(class="reg__title") данные для входа в сервис
-        +default-textfield("Email")(class="reg__input")
-        +default-textfield("Пароль")(class="reg__input")
-        +toggle
-        +button-buy("зарегистрироваться")(class="reg__button")
-        div(class="reg__box flex")
-            p(class="reg__text") Уже есть аккаунт на Toxin
-            +button-uncolored("войти")
+
 
 
 

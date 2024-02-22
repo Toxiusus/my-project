@@ -1,0 +1,14 @@
+mixin registration
+    form(class="reg")
+        h1(class="reg__main-title") Регистрация аккаунта
+        +default-textfield("Имя")(class="reg__input")
+        +default-textfield("Фамилия")(class="reg__input")
+        +radio
+        h3(class="reg__title") дата рождения
+        +default-textfield("ДД.ММ.ГГГГ")(class="reg__input-birth")
+        h3(class="reg__title") данные для входа в сервис
+        +default-textfield("Email")(class="reg__input")
+        +default-textfield("Пароль")(class="reg__input")
+        +toggle
+        div(class="reg__box flex")
+            p(class="reg__text") Уже есть аккаунт на Toxin
