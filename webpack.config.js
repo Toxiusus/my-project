@@ -64,8 +64,12 @@ module.exports = {
         type: 'asset/inline',
       },
       {
-        test: /\.(woff2?|eot|ttf|otf)$/i,
+        test: /\.(ttf|woff|woff2|svg|eot)$/,
+        exclude: [/images/],
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]',
+        },
       },
     ],
   },
