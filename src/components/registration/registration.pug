@@ -10,5 +10,7 @@ mixin registration
         +default-textfield("Email")(class="reg__input")
         +default-textfield("Пароль")(class="reg__input")
         +toggle
+        +button({span:"зарегистрироваться", size:"stretching"},"a","signin.pug")(class="reg__button")
         div(class="reg__box flex")
             p(class="reg__text") Уже есть аккаунт на Toxin
+            +button({span:"войти", size:"small"},"a","signin.pug")(class="")

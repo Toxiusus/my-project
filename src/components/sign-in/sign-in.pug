@@ -3,5 +3,7 @@ mixin sign-in
         h1(class="sign-in__main-title") Войти
         +default-textfield("Email")(class="sign-in__input")
         +default-textfield("Пароль")(class="sign-in__inputlast")
+        +button({span:"войти", size:"stretching"},"a","signin.pug")(class="sign-in__button")
         div(class="sign-in__box flex")
             p(class="sign-in__text") Нет аккаунта на Toxin?
+            +button({span:"войти", size:"small"},"a","signin.pug")

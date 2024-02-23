@@ -11,5 +11,5 @@ mixin button(options,tag,href)
       stretching: "button-stretching" 
     }
 
-  #{tag}(class="btn-reset" class=[sizeMode[size]] href=href)
+  #{tag}(class="btn-reset" class!=attributes.class class=[sizeMode[size]] href=href)
     span()=options.span
