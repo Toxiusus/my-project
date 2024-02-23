@@ -1,9 +1,6 @@
 :root {
   --font-family: "Montserrat", sans-serif;
-  --second-family: "Material Icons", sans-serif;
-  --third-family: "Font Awesome 5 Brands", sans-serif;
-  // --font-family: "MontserratRegular", sans-serif;
-  // --second-family: "MontserratBold", sans-serif;
+  --second-family: "MontserratBold", sans-serif;
   --content-width: 1160px;
   --container-offset: 13.5px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));

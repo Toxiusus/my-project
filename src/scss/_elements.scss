@@ -170,7 +170,7 @@
   position: relative;
 
   &__input {
-    width: 209px;
+    width: 100%;
     cursor: pointer;
     text-transform: uppercase;
     border: none;
@@ -186,6 +186,7 @@
   }
 
   &__img {
+    cursor: pointer;
     position: absolute;
     top: 5px;
     right: 20px;
@@ -212,7 +213,7 @@
   position: relative;
 
   &__input {
-    padding: 15px 80px 15px 15px;
+    padding: 15px 80px 12px 15px;
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid rgba(31, 32, 65, 0.25);
