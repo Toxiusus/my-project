@@ -3,7 +3,7 @@
   border-bottom: 1px solid rgba(31, 32, 65, 0.25);
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     grid-column: 2;
   }
 
@@ -16,6 +16,8 @@
 }
 
 .aside {
+  max-width: 266px;
+  
   &__title {
     margin-bottom: 5px;
   }
