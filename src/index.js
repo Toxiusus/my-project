@@ -1,5 +1,4 @@
 import './scss/main.scss';
-import './scss/_footer.scss';
 import './scss/_vars.scss';
 import './scss/_hero.scss';
 import './scss/_elements.scss';
@@ -23,6 +22,7 @@ import './components/sign-in/sign-in.scss';
 import './components/reviews/reviews.scss';
 import './components/registration/registration.scss';
 import './components/header/header.scss';
+import './components/footer/footer.scss';
 import "./js/dropdown";
 import "./js/second-dropdown";
 import "./js/checkbox";
