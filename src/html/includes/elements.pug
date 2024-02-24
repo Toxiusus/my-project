@@ -107,7 +107,7 @@ mixin booking
                 +default-textfield("ДД.ММ.ГГГГ","end")(class="booking__input")
             h3(class="booking__text") гости
         +dropdown-guests("Сколько гостей")(class="drop-hero")(class="drop-hero__input")
-        +button({span:"подобрать номер", size:"stretching"},"a","sign-in.pug")
+        +button({span:"подобрать номер", size:"stretching"},"a","sign-in.pug")(class="booking__button")
 
 mixin calendar
     div(class="wrapper" class!=attributes.class)
@@ -165,4 +165,4 @@ mixin room-booking
             div(class="booking__total flex")
                 p(class="booking__totaltext") Итого
                 P(class="booking__totaltext") 38 081₽
-        +button-buy("подобрать номер")(class="button-hero")
+        +button({span:"подобрать номер", size:"stretching"},"a","sign-in.pug")
