@@ -1,31 +1,37 @@
-.hero {
-  width: 100%;
-  height: 100vh;
-  background-image: url('../images/hero-bg.png');
-  background-position: center;
-  background-size: cover;
+.landing {
+  background: 50% 68%/106% url("../images/hero-bg.png");
   background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  width: 100%;
+  height: 830px;
 
-  &__content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto 475px;
+  &__container {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 320px;
+    padding: 70px 0 0 140px;
+  }
+
+  &__content{
+    min-width: 380px;
   }
 
   &__text {
-    padding-left: 300px;
-    text-align: right;
-    grid-column: 2;
-    grid-row: 2;
-    display: flex;
-    align-items: flex-end;
-    color: rgba(31, 32, 65, 0.75);
+    align-self: flex-end;
+    margin: 0;
+    max-width: 297px;
+    padding: 316px 0 21px 0;
+    text-align: end;
+    color: var(--dark75);
     line-height: 24px;
   }
 }
 
-.hero-booking {
-  margin-top: 70px;
+.landing-title {
+  padding-bottom: 5px;
 }
 
 .drop-hero {

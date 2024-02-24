@@ -9,7 +9,7 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     outline: none;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
 
     &::placeholder {
       color: var(--dark-shade25);
@@ -37,7 +37,7 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     padding: 12px 45px 12px 15px;
     outline: none;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
 
     &::placeholder {
       color: var(--dark-shade75);
@@ -50,42 +50,22 @@
   }
 }
 
-
-
-
-
-
-
-
 .col {
   display: grid;
   gap: 20px;
 }
 
-
-
-
-
 .like__content-active {
-  border: 1px solid #BC9CFF;
+  border: 1px solid #bc9cff;
 }
 
 .like__img-active {
-  background-image: url('../images/favorite.svg');
+  background-image: url("../images/favorite.svg");
 }
 
 .like__num-active {
-  color: var(--Primary-Color, #BC9CFF);
+  color: var(--Primary-Color, #bc9cff);
 }
-
-
-
-
-
-
-
-
-
 
 /*howManyGuests*/
 .guests {
@@ -163,7 +143,6 @@
   }
 }
 
-
 /*dropdown-menu*/
 .select {
   margin-top: 30px;
@@ -208,7 +187,6 @@
 
 /*second dropdown*/
 
-
 .drop {
   position: relative;
 
@@ -251,9 +229,9 @@
 /*booking*/
 .booking {
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, .12);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   max-width: 380px;
   min-width: 380px;
   padding: 39px 30px 30px 29px;
@@ -291,7 +269,7 @@
   }
 
   &__how {
-    color: var(--dark-50, rgba(31, 32, 65, 0.50));
+    color: var(--dark-50, rgba(31, 32, 65, 0.5));
     text-align: right;
     font-family: var(--second-family);
     font-weight: 700;
@@ -300,7 +278,7 @@
   }
 
   &__day {
-    color: rgba(31, 32, 65, 0.50);
+    color: rgba(31, 32, 65, 0.5);
     font-size: var(--second-size);
     line-height: 18px;
     font-weight: 400;
@@ -315,9 +293,13 @@
     margin-top: 20px;
   }
 
+  &__guests{
+    margin-top: 22px;
+  }
+  
   &__box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    margin-top: 22px;
+    display: flex;
     gap: 20px;
   }
 
@@ -355,7 +337,7 @@
     width: 320px;
     height: 44px;
   }
-  &__button{
+  &__button {
     margin-top: 30px;
   }
 }
