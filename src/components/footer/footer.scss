@@ -49,6 +49,11 @@
       align-items: center;
       padding: 22.5px 140px;
     }
+
+    &__social{
+      align-items: center;
+      justify-content: space-between;
+    }
   
     &__text {
       color: var(--dark-shade75);
