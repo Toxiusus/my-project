@@ -236,8 +236,9 @@
   min-width: 380px;
   padding: 39px 30px 30px 29px;
 
-  &__titles {
+  &__header {
     justify-content: space-between;
+    align-items: baseline;
   }
 
   &__no {
