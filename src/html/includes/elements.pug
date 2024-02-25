@@ -158,14 +158,16 @@ mixin room-booking
         div(class="booking__prices")
             div(class="booking__full")
                 div(class="booking__price flex")
-                    p(class="booking__count") 9 990₽ х 4 суток
-                    P(class="booking__count") 39 960₽
+                    span(class="booking__count") 9 990₽ х 4 суток
+                    span(class="booking__count") 39 960₽
                 div(class="booking__price flex")
-                    p(class="booking__count") Сбор за услуги: скидка 2 179₽
-                    P(class="booking__count") 0₽
+                    span(class="booking__count") Сбор за услуги: скидка 2 179₽
+                    img(class="booking__info" src=require('/src/images/info.svg') alt='info')
+                    span(class="booking__count") 0₽
                 div(class="booking__price flex")
-                    p(class="booking__count") Сбор за дополнительные услуги
-                    P(class="booking__count") 300₽
+                    span(class="booking__service") Сбор за дополнительные услуги
+                    img(class="booking__info" src=require('/src/images/info.svg') alt='info')
+                    span(class="booking__count") 300₽
             div(class="booking__total flex")
                 p(class="booking__totaltext") Итого
                 P(class="booking__totaltext") 38 081₽

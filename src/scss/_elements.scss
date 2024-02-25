@@ -288,13 +288,22 @@
   }
 
   &__price{
+    align-items: baseline;
     justify-content: space-between;
     padding-bottom: 10px;
-    color: rgba(31, 32, 65, 0.5);
+    color: var(--dark75);
   }
 
+  &__info{
+    width: 20px;
+    height: 20px;
+    margin: 0 auto 0 5px;
+  }
+  &__service{
+    width: 214px;
+  }
   &__full {
-    margin-top: 20px;
+    margin-top: 19px;
   }
 
   &__guests {
@@ -313,7 +322,7 @@
   }
 
   &__totaltext {
-    color: rgb(31, 32, 65);
+    color: var(--dark75);
     font-family: var(--second-family);
     font-size: 19px;
     font-weight: 700;

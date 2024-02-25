@@ -1,10 +1,11 @@
 mixin reviews(name,username,comment)
     div(class="reviews__box")
         div(class="reviews__content")
-            div(class="reviews__userbox")
+            div(class="reviews__top flex")
                 img.src(class="reviews__img" src=require(`../src/images/${name}.jpg`))
-                p( class="reviews__name") #{username}
-                p(class="reviews__days") 5 дней назад
-            div(class="reviews__commentsbox")
+                div(class="reviews__descr")
+                    p( class="reviews__name") #{username}
+                    p(class="reviews__days") 5 дней назад
+            div(class="reviews__bot flex")
                 +like
                 p(class="reviews__comment") #{comment}
