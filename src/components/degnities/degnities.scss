@@ -4,11 +4,7 @@
     }
   
     &__box {
-      display: grid;
-      grid-template-columns: 50px 210px;
       width: 280px;
-      padding-bottom: 17px;
-      margin-bottom: 23px;
       border-bottom: 1px solid var(--dark-10, rgba(31, 32, 65, 0.1));
     }
   
@@ -23,7 +19,7 @@
       line-height: 24px;
     }
   
-    &__text {
+    &__undertitle {
       color: var(--dark-shade75);
       line-height: 24px;
     }

@@ -1,6 +1,8 @@
 mixin degnities(name,title,text)
     div(class="degnities")
-        div(class="degnities__box")
-            img.src(class="degnities__img" src=require(`../src/images/${name}.svg`) alt=name)
-            p(class="degnities__uptitle") #{title}
-            p(class="degnities__text") #{text}
+        div(class="degnities__box flex")
+            div(class="degnities__icon")
+                img.src(class="degnities__img" src=require(`../src/images/${name}.svg`) alt=name)
+            div(class="degnities__description")
+                p(class="degnities__uptitle") #{title}
+                p(class="degnities__undertitle") #{text}

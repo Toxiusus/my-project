@@ -143,17 +143,17 @@ mixin room-booking
                 span(class="booking__luxe") люкс
             div(class="booking__prices flex")
                 p(class="booking__value-room") 9 990₽ 
-                p(class="booking__text") в сутки
+                p(class="booking__text-room") в сутки
         div(class="booking__box")
             div(class="booking__start")
-                h3(class="booking__text") прибытие
+                h3(class="booking__title") прибытие
                 +default-textfield("ДД.ММ.ГГГГ","start")(class="booking__input")
                 +calendar
             div(class="booking__end")
-                h3(class="booking__text") выезд
+                h3(class="booking__title") выезд
                 +default-textfield("ДД.ММ.ГГГГ","end")(class="booking__input")
         div(class="booking__guests")
-            h3(class!=attributes.class) гости
+            h3(class="booking__title") гости
             +dropdown-guests("Сколько гостей")(class="drop-hero")(class="drop-hero__input")
         div(class="booking__prices")
             div(class="booking__full")
