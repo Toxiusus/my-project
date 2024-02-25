@@ -238,6 +238,7 @@
 
   &__header {
     justify-content: space-between;
+    align-items: baseline;
   }
 
   &__number{
@@ -248,25 +249,21 @@
     color: rgb(31, 32, 65);
     font-family: var(--second-family);
     font-size: 14px;
-    line-height: 0px;
-    letter-spacing: 0%;
-    text-align: left;
   }
 
   &__value {
     color: rgb(31, 32, 65);
     font-family: var(--second-family);
     font-size: 24px;
-    line-height: 0px;
-    letter-spacing: 0%;
-    text-align: left;
+    padding-left: 4px;
   }
 
-  &__price{
+  &__prices{
     align-items: baseline;
   }
 
   &__luxe {
+    padding-left: 5px;
   }
 
   &__value-room {
