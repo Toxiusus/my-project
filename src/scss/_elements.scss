@@ -238,29 +238,41 @@
 
   &__header {
     justify-content: space-between;
+  }
+
+  &__number{
     align-items: baseline;
   }
 
-  &__no {
-    margin-right: 5px;
-    color: var(--dark-shade100);
-    font-weight: 700;
+  &__symbol {
+    color: rgb(31, 32, 65);
+    font-family: var(--second-family);
+    font-size: 14px;
+    line-height: 0px;
+    letter-spacing: 0%;
+    text-align: left;
   }
 
-  &__number {
-    margin-right: 8px;
-    color: var(--dark-shade100);
+  &__value {
+    color: rgb(31, 32, 65);
     font-family: var(--second-family);
-    font-size: 19px;
-    font-weight: 700;
+    font-size: 24px;
+    line-height: 0px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  &__price{
+    align-items: baseline;
   }
 
   &__luxe {
-    color: var(--purple-color);
-    font-size: var(--second-size);
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 15px;
+  }
+
+  &__value-room {
+  }
+
+  &__text {
   }
 
   &__count {
@@ -268,35 +280,14 @@
     line-height: 24px;
   }
 
-  &__how {
-    color: var(--dark-50, rgba(31, 32, 65, 0.5));
-    text-align: right;
-    font-family: var(--second-family);
-    font-weight: 700;
-    line-height: 18px;
-    margin-right: 5px;
-  }
-
-  &__day {
-    color: rgba(31, 32, 65, 0.5);
-    font-size: var(--second-size);
-    line-height: 18px;
-    font-weight: 400;
-  }
-
-  &__price {
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-
   &__full {
     margin-top: 20px;
   }
 
-  &__guests{
+  &__guests {
     margin-top: 22px;
   }
-  
+
   &__box {
     margin-top: 22px;
     display: flex;

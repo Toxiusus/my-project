@@ -137,14 +137,13 @@ mixin booking
 mixin room-booking
     div(class="booking" class!=attributes.class)
         div(class="booking__header flex")
-            div(class="booking__nomer flex")
-                span(class="booking__span flex")
-                span(class="booking__no") № 
-                span(class="booking__number") 888
+            div(class="booking__number flex")
+                span(class="booking__symbol") № 
+                span(class="booking__value") 888
                 span(class="booking__luxe") люкс
-            div(class="booking__nomer flex")
-                p(class="booking__how") 9 990₽ 
-                p(class="booking__day") в сутки
+            div(class="booking__price flex")
+                p(class="booking__value-room") 9 990₽ 
+                p(class="booking__text") в сутки
         div(class="booking__box")
             div(class="booking__start")
                 h3(class="booking__text") прибытие
