@@ -8,8 +8,8 @@ mixin button(options,tag,href)
     const sizeMode = {
       small: "button-small",
       large: "button-large",
-      stretching: "button-stretching" 
+      stretching: "button-stretching"
     }
 
-  #{tag}(class="btn-reset" class!=attributes.class class=[sizeMode[size]] href=href)
+  #{tag}(class="btn-reset flex" class!=attributes.class class=[sizeMode[size]] href=href)
     span()=options.span

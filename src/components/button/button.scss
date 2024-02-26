@@ -13,62 +13,58 @@
     font-size: var(--second-size);
     font-family: var(--second-family);
     text-transform: uppercase;
-    font-weight: 700;
     color: var(--designColor_main);
   }
 }
 
 .button-large {
-    background: var(--mainGradient);
-    padding: 10px 20px;
-    border-radius: 100px;
-    transition: 0.3s ease-in-out;
-  
-    &:hover {
-      opacity: 0.5;
-    }
-  
-    span {
-      font-size: var(--second-size);
-      font-family: var(--second-family);
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--light-color);
-    }
+  background: var(--mainGradient);
+  padding: 10px 20px;
+  border-radius: 100px;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
   }
 
-  .button-stretching {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--mainGradient);
-    padding: 15px 22px;
-    border-radius: 100px;
-    transition: 0.3s ease-in-out;
-  
-    &:hover {
-      opacity: 0.5;
-    }
-  
-    span {
-      position: relative;
-      font-size: var(--second-size);
-      font-family: var(--second-family);
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--light-color);
+  span {
+    font-size: var(--second-size);
+    font-family: var(--second-family);
+    text-transform: uppercase;
+    color: var(--light-color);
+  }
+}
 
-      &::after {
-        position: absolute;
-        content: '';
-        background-image: url("../../images/arrow.svg");
-        background-repeat: no-repeat;
-        width: 17px;
-        height: 17px;
-        right: -86px;
-        top: -2px;
-      }
+.button-stretching {
+  padding: 13px 32px 12px 45px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--mainGradient);
+  border-radius: 100px;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  span {
+    font-size: var(--second-size);
+    font-family: var(--second-family);
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    &::after{
+      position: absolute;
+      content: "";
+      background-image: url("../../images/arrow.svg");
+      background-repeat: no-repeat;
+      width: 17px;
+      height: 17px;
+      right: 12px;
+      top: 12px;
     }
   }
-  
+}

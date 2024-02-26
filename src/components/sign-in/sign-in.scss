@@ -3,10 +3,11 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  padding: 172px 0;
   background-image: url("../../images/bg-log.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
 }
 
 .sign-in {
