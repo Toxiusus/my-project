@@ -1,33 +1,3 @@
-.default-textfield {
-  display: inline-block;
-  position: relative;
-
-  &__input {
-    width: 100%;
-    padding: 12px 130px 12px 15px;
-    background: var(--light-color);
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 4px;
-    outline: none;
-    transition: 0.3s ease-in-out;
-
-    &::placeholder {
-      color: var(--dark-shade25);
-    }
-
-    &:hover {
-      border: 1px solid var(--dark-shade50);
-    }
-  }
-
-  &__box {
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translateY((-50%));
-    cursor: pointer;
-  }
-}
 
 .select-menu {
   &__input {

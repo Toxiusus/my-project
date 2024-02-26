@@ -1,12 +1,6 @@
-mixin default-textfield(name,id)
-    div(class="default-textfield")
-        input(class="default-textfield__input input-reset" class!=attributes.class placeholder=`${name}` type="text" id=`${id}`)
 
-mixin inputEmail(imagename)
-    div(class="default-textfield")
-        input(class="default-textfield__input input-reset" type="text" placeholder="E-mail")
-        div(class="default-textfield__box")
-            img.src(class="comfort__img" src=require(`../src/images/${imagename}.svg`) alt=name)
+
+
 
 
 mixin howManyGuests(firtsname,secondname,thirdname)
