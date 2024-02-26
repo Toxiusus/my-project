@@ -1,0 +1,128 @@
+.booking {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    max-width: 380px;
+    min-width: 380px;
+    padding: 39px 30px 30px 29px;
+  
+    &__header {
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  
+    &__title {
+      padding-bottom: 5px;
+    }
+  
+    &__number {
+      align-items: baseline;
+    }
+  
+    &__symbol {
+      color: rgb(31, 32, 65);
+      font-family: var(--second-family);
+      font-size: 14px;
+    }
+  
+    &__value {
+      color: rgb(31, 32, 65);
+      font-family: var(--second-family);
+      font-size: 24px;
+      padding-left: 4px;
+    }
+  
+    &__prices {
+      align-items: baseline;
+    }
+  
+    &__luxe {
+      padding-left: 5px;
+      color: rgb(188, 156, 255);
+      font-family: var(--second-family);
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+    }
+  
+    &__value-room {
+      font-family: var(--second-family);
+      font-size: 14px;
+      color: rgba(31, 32, 65, 0.5);
+    }
+  
+    &__text-room {
+      padding-left: 5px;
+      font-size: 12px;
+      color: rgba(31, 32, 65, 0.5);
+    }
+  
+    &__price{
+      align-items: baseline;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      color: var(--dark75);
+    }
+  
+    &__info{
+      width: 20px;
+      height: 20px;
+      margin: 0 auto 0 5px;
+    }
+    &__service{
+      width: 214px;
+    }
+    &__full {
+      margin-top: 19px;
+    }
+  
+    &__guests {
+      margin-top: 22px;
+    }
+  
+    &__box {
+      margin-top: 22px;
+      display: flex;
+      gap: 20px;
+    }
+  
+    &__total {
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+  
+    &__totaltext {
+      color: var(--dark75);
+      font-family: var(--second-family);
+      font-size: 19px;
+      font-weight: 700;
+    }
+  
+    &__input {
+      padding: 12px 45px 12px 15px;
+    }
+  
+    &__guests {
+      grid-column: span 2;
+      margin-bottom: 31px;
+    }
+  
+    &__inputguest {
+      padding: 12px 45px 12px 15px;
+      width: 320px;
+      height: 44px;
+      outline: none;
+    }
+  
+    &__btn {
+      display: block;
+      margin: 0 auto;
+      width: 320px;
+      height: 44px;
+    }
+    &__button {
+      margin-top: 30px;
+    }
+  }
+  

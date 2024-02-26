@@ -18,7 +18,7 @@ for (let i = 0; i < guestsPlus.length; i++) {
 
     getTotal();
 
-    if(document.getElementById("comfort")){
+    if(!document.getElementById("comfort")){
       getComforts();
     }
   })
@@ -46,7 +46,7 @@ for (let i = 0; i < guestsMinus.length; i++) {
     
     getTotal();
 
-    if(document.getElementById("comfort")){
+    if(!document.getElementById("comfort")){
       getComforts();
     }
   })
