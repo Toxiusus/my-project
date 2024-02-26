@@ -3,8 +3,11 @@ include ../../components/bullet-list/bullet-list.pug
 include ../../components/degnities/degnities.pug
 include ../../components/like/like.pug
 include ../../components/reviews/reviews.pug
-include ../../components/room-booking/room-booking.pug
+include ../../components/booking/booking.pug
 include ../../components/calendar/calendar.pug
+include ../../components/default-textfield/default-textfield.pug
+include ../../components/how-many-guests/how-many-guests.pug
+include ../../components/input-email/input-email.pug
 
 section(class="room")
   div(class="room__content")
@@ -39,4 +42,4 @@ section(class="room")
           +reviews("user-2","Патрисия Стёклышкова","Обслуживание на высоте!   Всё     аккуратно, чисто. Завтраки в номер советую заказать, каждый   день новое    блюдо и десерт как комплимент")
         +bullet-list
       div(class="room__booking")
-        //- +room-booking
+        +room-booking
