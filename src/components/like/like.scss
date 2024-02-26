@@ -26,3 +26,21 @@
       font-size: 10px;
     }
   }
+
+  .col {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .like__content-active {
+    border: 1px solid #bc9cff;
+  }
+  
+  .like__img-active {
+    background-image: url("../../images/favorite.svg");
+  }
+  
+  .like__num-active {
+    color: var(--Primary-Color, #bc9cff);
+  }
+  

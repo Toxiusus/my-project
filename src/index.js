@@ -1,7 +1,6 @@
 import './scss/main.scss';
 import './scss/_vars.scss';
 import './scss/landing.scss';
-import './scss/_elements.scss';
 import './scss/_room.scss';
 import './scss/_signin.scss';
 import './scss/_search-room.scss';
@@ -14,6 +13,8 @@ import './components/pagination/pagination.scss';
 import './components/bullet-list/bullet-list.scss';
 import './components/degnities/degnities.scss';
 import './components/like/like.scss';
+import './components/dropdown-menu/dropdown-menu.scss';
+import './components/how-many-guests/how-many-guests.scss';
 import './components/default-textfield/default-textfield.scss';
 import './components/calendar/calendar.scss';
 import './components/room-booking/room-booking.scss';
