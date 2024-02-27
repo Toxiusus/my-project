@@ -11,7 +11,7 @@ mixin howManyGuests(firtsname,secondname,thirdname)
             p(class="guests__text") #{secondname}
             div(class="guests__count")
                 span(class="guests__minus guests__increment" id="minusChildren") -
-                span(id="minusChildren" class!=attributes.class) 0
+                span(id="numChildren" class!=attributes.class) 0
                 span(class="guests__plus guests__increment" id="minusChildren") +
         div(class="guests__box")
             p(class="guests__text") #{thirdname}
