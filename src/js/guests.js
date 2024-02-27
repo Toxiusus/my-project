@@ -18,7 +18,7 @@ for (let i = 0; i < guestsPlus.length; i++) {
 
     getTotal();
 
-    if(!document.getElementById("comfort")){
+    if(document.getElementById("comfort")){
       getComforts();
     }
   })
@@ -46,7 +46,7 @@ for (let i = 0; i < guestsMinus.length; i++) {
     
     getTotal();
 
-    if(!document.getElementById("comfort")){
+    if(document.getElementById("comfort")){
       getComforts();
     }
   })
@@ -74,7 +74,7 @@ function getTotal() {
   }
 }
 
-if (document.getElementById("comfort")) {
+
   function getComforts() {
     let arr = document.querySelectorAll(".guests__comfots");
     let total = 0;
@@ -85,14 +85,20 @@ if (document.getElementById("comfort")) {
     }
 
     document.getElementById("comfort").value = total;
+
+    if (document.getElementById("bedrooms")) {
+      document.getElementById("comfort").value = total + " спален";
+    } else if (document.getElementById("beds")) {
+      document.getElementById("comfort").value = total + " кроватей";
+    } 
   }
-}
+
 
 let guestsDelete = document.getElementById("guestsDelete");
 
 guestsDelete.addEventListener("click", function deleteGuests() {
 
-  document.getElementById("howManyGuests").value = 0;
+  document.getElementById("howManyGuests").value = "Сколько гостей";
 
   let arr = document.querySelectorAll(".guests__num");
 
