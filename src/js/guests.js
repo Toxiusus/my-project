@@ -73,32 +73,34 @@ function getTotal() {
 }
 
 function getComforts() {
-  let spans = document.querySelectorAll(".guests__comfots");
-
-  let total = 0;
-
-  let arr = [];
-
-  for (let i = 0; i < arr.length; i++) {
-    
-  }
-  // spans.forEach((span => {
-  //   arr.push({
-  //     id: span.id,
-  //     value: parseInt(span.textContent, 10),
-  //   });
-  // }));
-  document.getElementById("comfort").value = total;
-  // let arr = document.querySelectorAll(".guests__comfots");
+  // let spans = document.querySelectorAll(".guests__comfots");
 
   // let total = 0;
 
-  // for (let i = 0; i < arr.length; i++) {
-  //   if (parseInt(arr[i].innerHTML)) {
-  //     total += parseInt(arr[i].innerHTML);
-  //   }
-  // }
-  // document.getElementById("comfort").value = total;
+  // let arr = [];
+
+  // spans.forEach((span => {
+  //   arr.push({
+  //     name: span.innerHTML,
+  //     value: parseInt(span.textContent, 10),
+  //   });
+  // }));
+  // document.getElementById("comfort").value = arr;
+
+  let arr = document.querySelectorAll(".guests__comfots");
+
+  let names = document.querySelectorAll("guests__text");
+  console.log(names);
+
+  let total = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (parseInt(arr[i].innerHTML)) {
+      total += parseInt(arr[i].innerHTML);
+    }
+  }
+
+  document.getElementById("comfort").value = total;
 }
 
 let guestsDelete = document.getElementById("guestsDelete");
