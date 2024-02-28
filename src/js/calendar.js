@@ -86,7 +86,7 @@ function showDate(evt) {
     }
 
     daysLi.forEach(function (li) {
-        if (!chooseInput) {
+        if (chooseInput) {
             document.getElementById(chooseInput).value = target.innerText + '.' + currMonth + '.' + currYear;
             chosenState[chooseInput].state = 1;
         }
@@ -94,14 +94,16 @@ function showDate(evt) {
         
         chosenState[chooseInput].state = 1;
     });
-    
-    if(document.getElementById("drop-calendar").value == ""){
-        document.getElementById("drop-calendar").value = target.innerText + '.' + (currMonth+1) + '.' + currYear;
-    } else if(document.getElementById("drop-calendar").value.lenght < 12){
-        document.getElementById("drop-calendar").value = document.getElementById("drop-calendar").value + " - " + target.innerText + '.' + (currMonth+1) + '.' + currYear;
-    } else {
-        document.getElementById("drop-calendar").value = document.getElementById("drop-calendar").value.split(" - ")[0] + " - " + target.innerText + '.' + (currMonth+1) + '.' + currYear;
+    if(document.getElementById("drop-calendar")){
+        if(document.getElementById("drop-calendar").value == ""){
+            document.getElementById("drop-calendar").value = target.innerText + '.' + (currMonth+1) + '.' + currYear;
+        } else if(document.getElementById("drop-calendar").value.lenght < 12){
+            document.getElementById("drop-calendar").value = document.getElementById("drop-calendar").value + " - " + target.innerText + '.' + (currMonth+1) + '.' + currYear;
+        } else {
+            document.getElementById("drop-calendar").value = document.getElementById("drop-calendar").value.split(" - ")[0] + " - " + target.innerText + '.' + (currMonth+1) + '.' + currYear;
+        }
     }
+
     // document.getElementById("drop-calendar").value = document.getElementById("drop-calendar").value == "" ? target.innerText + '.' + currMonth + '.' + currYear: document.getElementById("drop-calendar").value + " - " + target.innerText + '.' + currMonth + '.' + currYear;
 
     target.classList.add('active');
