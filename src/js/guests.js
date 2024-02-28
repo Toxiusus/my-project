@@ -61,7 +61,7 @@ function getTotal() {
   let arr = document.querySelectorAll(".guests__num");
 
   let total = 0;
-  
+
   for (let i = 0; i < arr.length; i++) {
     if (parseInt(arr[i].innerHTML)) {
       total += parseInt(arr[i].innerHTML);
@@ -81,14 +81,13 @@ function getTotal() {
   }
 }
 
-function getComforts(id,action) {
-  let arr = document.querySelectorAll(".guests__comfots");
+function getComforts(id) {
 
   let string = "";
 
-  if (id == "plusAdults" || id == "minusAdults") {
+  if (id == "plusBedrooms" || id == "minusBedrooms") {
     bedrooms = parseInt(document.getElementById("bedrooms").innerHTML);
-  } else if (id == "plusChildren" || id == "minusChildren") {
+  } else if (id == "plusBeds" || id == "minusBeds") {
     beds = parseInt(document.getElementById("beds").innerHTML);
   } else {
     bathrooms = parseInt(document.getElementById("bathrooms").innerHTML);

@@ -29,18 +29,18 @@ mixin howManyComfort(firtsname,secondname,thirdname)
         div(class="guests__box")
             p(class="guests__text") #{firtsname}
             div(class="guests__count")
-                span(class="guests__minus guests__increment" id="minusAdults") -
+                span(class="guests__minus guests__increment" id="minusBedrooms") -
                 span(id="bedrooms" class!=attributes.class) 0
-                span(class="guests__plus guests__increment" id="plusAdults") +
+                span(class="guests__plus guests__increment" id="plusBedrooms") +
         div(class="guests__box")
             p(class="guests__text") #{secondname}
             div(class="guests__count")
-                span(class="guests__minus guests__increment" id="minusChildren") -
+                span(class="guests__minus guests__increment" id="minusBeds") -
                 span(id="beds" class!=attributes.class) 0
-                span(class="guests__plus guests__increment" id="plusChildren") +
+                span(class="guests__plus guests__increment" id="plusBeds") +
         div(class="guests__box")
             p(class="guests__text") #{thirdname}
             div(class="guests__count")
-                span(class="guests__minus guests__increment" id="minusInfants") -
+                span(class="guests__minus guests__increment" id="minusBathrooms") -
                 span(id="bathrooms" class!=attributes.class) 0
-                span(class="guests__plus guests__increment" id="plusInfants") +
+                span(class="guests__plus guests__increment" id="plusBathrooms") +
