@@ -86,7 +86,7 @@ function showDate(evt) {
     }
 
     daysLi.forEach(function (li) {
-        if (chooseInput) {
+        if (document.getElementById(chooseInput)) {
             document.getElementById(chooseInput).value = target.innerText + '.' + currMonth + '.' + currYear;
             chosenState[chooseInput].state = 1;
         }
@@ -105,7 +105,7 @@ function showDate(evt) {
     }
 
     // document.getElementById("drop-calendar").value = document.getElementById("drop-calendar").value == "" ? target.innerText + '.' + currMonth + '.' + currYear: document.getElementById("drop-calendar").value + " - " + target.innerText + '.' + currMonth + '.' + currYear;
-
+    
     target.classList.add('active');
 
     target.classList.add(curClass);
@@ -113,30 +113,43 @@ function showDate(evt) {
     chooseInput = 'end';
 
     btnDelete.addEventListener(('click'), (e) => {
-        target.classList.remove('active');
-        inputStart.value = "";
-        inputEnd.value = "";
+        if(inputStart && inputEnd) {
+            target.classList.remove('active');
+            inputStart.value = "";
+            inputEnd.value = "";
+        }
+        if(dropCalendar){
+            dropCalendar.value = "";
+        }
     });
 }
+
 if (inputStart) {
     inputStart.addEventListener('click', e => {
         chooseInput = 'start';
         bookingWrapper.classList.add('wrapper--visible');
     });
 }
+
 if (inputEnd) {
     inputEnd.addEventListener('click', e => {
         chooseInput = 'end';
         bookingWrapper.classList.add('wrapper--visible');
     });
 }
+
 btnSubmit.addEventListener('click', e => {
     bookingWrapper.classList.remove('wrapper--visible');
+    bookingWrapper.classList.remove('wrapper-visible');
 });
+
 const dateBtn = document.querySelector(".date__btn");
 const dateBox = document.querySelector(".date-box");
+
 if (dateBtn) {
     dateBtn.addEventListener("click", () => {
         dateBox.classList.toggle("date-box__active");
     });
 }
+
+let dropCalendar = document.getElementById("drop-calendar");
