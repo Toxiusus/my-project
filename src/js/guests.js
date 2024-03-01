@@ -10,7 +10,7 @@ let bathrooms = 0;
 for (let i = 0; i < guestsPlus.length; i++) {
   let button = guestsPlus[i];
 
-  button.addEventListener("click", function (event) {
+  button.addEventListener("click", function(event) {
     let buttonClicked = event.target;
 
     let input = buttonClicked.parentElement.children[1];
@@ -24,7 +24,7 @@ for (let i = 0; i < guestsPlus.length; i++) {
     getTotal();
 
     if (document.getElementById("comfort")) {
-      getComforts(this.id,"increment");
+      getComforts(this.id, "increment");
     }
   });
 }
@@ -51,13 +51,12 @@ for (let i = 0; i < guestsMinus.length; i++) {
     getTotal();
 
     if (document.getElementById("comfort")) {
-      getComforts(this.id,"decrement");
+      getComforts(this.id, "decrement");
     }
   });
 }
 
 function getTotal() {
-
   let arr = document.querySelectorAll(".guests__num");
 
   let total = 0;
@@ -82,7 +81,6 @@ function getTotal() {
 }
 
 function getComforts(id) {
-
   let string = "";
 
   if (id == "plusBedrooms" || id == "minusBedrooms") {
@@ -93,22 +91,22 @@ function getComforts(id) {
     bathrooms = parseInt(document.getElementById("bathrooms").innerHTML);
   }
 
-  if(bedrooms > 0){
-    string += bedrooms + " спальни"; 
-    if(beds > 0 || bathrooms > 0){
+  if (bedrooms > 0) {
+    string += bedrooms + " спальня";
+    if (beds > 0 || bathrooms > 0) {
       string += ", ";
     }
   }
 
-  if(beds > 0){
-    string += beds + " кровати"; 
-    if(bathrooms > 0){
+  if (beds > 0) {
+    string += beds + " кровати";
+    if (bathrooms > 0) {
       string += ", ";
     }
   }
 
-  if(bathrooms > 0){
-    string += bathrooms + " ванны"; 
+  if (bathrooms > 0) {
+    string += bathrooms + " ванны";
   }
 
   document.getElementById("comfort").value = string;

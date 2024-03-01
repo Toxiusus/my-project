@@ -1,5 +1,5 @@
 .landing {
-  background: 50% 68%/106% url("../images/hero-bg.png");
+  background: url("../images/hero-bg.png");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -10,12 +10,17 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 1440px;
     min-width: 320px;
-    padding: 70px 0 0 140px;
+    padding: 70px 0 0 0;
+
+    @media (max-width: 1000px) {
+      flex-direction: row;
+      justify-content: center;
+      padding: 100px 0;
+    }
   }
 
-  &__content{
+  &__content {
     min-width: 380px;
   }
 
@@ -27,6 +32,9 @@
     text-align: end;
     color: var(--dark75);
     line-height: 24px;
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 }
 
