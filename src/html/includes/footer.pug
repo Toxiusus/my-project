@@ -1,49 +1,52 @@
 footer(class="footer")
     div(class="top")
         div(class="top__wrapper container")
-            div(class="top__column")
-                a(href="hero.pug")
-                    img(class="top__logo" src=require('/src/images/Logo.svg') alt='logo')
-                ul(class="top__list list-reset")
-                    li(class="top__item")
-                        p(class="top__text" href="#") Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-            div(class="top__column")
-                h3(class="top__title" href="#") навигация
-                ul(class="list-reset top__list")
-                    li(class="top__item")
-                        a(class="top__link" href="#") О нас
-                    li(class="top__item")
-                        a(class="top__link" href="#") Новости
-                    li(class="top__item")
-                        a(class="top__link" href="#") Служба поддержки
-                    li(class="top__item")
-                        a(class="top__link" href="#") Услуги
-            div(class="top__column")
-                h3(class="top__title" href="#") О нас
-                ul(class="list-reset top__list")
-                    li(class="top__item")
-                        a(class="top__link" href="#") О сервисе
-                    li(class="top__item")
-                        a(class="top__link" href="#") Наша команда
-                    li(class="top__item")
-                        a(class="top__link" href="#") Вакансии
-                    li(class="top__item")
-                        a(class="top__link" href="#") Инвесторы
-            div(class="top__column")
-                h3(class="top__title" href="#") Служба поддержки
-                ul(class="list-reset top__list")
-                    li(class="top__item")
-                        a(class="top__link" href="#") Соглашения
-                    li(class="top__item")
-                        a(class="top__link" href="#") Сообщества
-                    li(class="top__item")
-                        a(class="top__link" href="#") Связь с нами
-            div(class="top__column")
-                h3(class="top__title") Подписка
-                ul(class="top__list list-reset")
-                    li(class="top__item")
-                        p(class="top__text") Получайте специальные предложения и новости сервиса
-                        +inputEmail("rightarow")
+            section(class="top__about")
+                div(class="top__column")
+                    a(href="hero.pug")
+                        img(class="top__logo" src=require('/src/images/Logo.svg') alt='logo')
+                    ul(class="top__list list-reset")
+                        li(class="top__item")
+                            p(class="top__text" href="#") Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+            section(class="top__links")
+                div(class="top__column")
+                    h3(class="top__title" href="#") навигация
+                    ul(class="list-reset top__list")
+                        li(class="top__item")
+                            a(class="top__link" href="#") О нас
+                        li(class="top__item")
+                            a(class="top__link" href="#") Новости
+                        li(class="top__item")
+                            a(class="top__link" href="#") Служба поддержки
+                        li(class="top__item")
+                            a(class="top__link" href="#") Услуги
+                div(class="top__column")
+                    h3(class="top__title" href="#") О нас
+                    ul(class="list-reset top__list")
+                        li(class="top__item")
+                            a(class="top__link" href="#") О сервисе
+                        li(class="top__item")
+                            a(class="top__link" href="#") Наша команда
+                        li(class="top__item")
+                            a(class="top__link" href="#") Вакансии
+                        li(class="top__item")
+                            a(class="top__link" href="#") Инвесторы
+                div(class="top__column")
+                    h3(class="top__title" href="#") Служба поддержки
+                    ul(class="list-reset top__list")
+                        li(class="top__item")
+                            a(class="top__link" href="#") Соглашения
+                        li(class="top__item")
+                            a(class="top__link" href="#") Сообщества
+                        li(class="top__item")
+                            a(class="top__link" href="#") Связь с нами
+            section(class="top__subscribe")
+                div(class="top__column")
+                    h3(class="top__title") Подписка
+                    ul(class="top__list list-reset")
+                        li(class="top__item")
+                            p(class="top__text") Получайте специальные предложения и новости сервиса
+                            +inputEmail("rightarow")
 
     div(class="bot")
         div(class="bot__wrapper container")

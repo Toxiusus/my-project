@@ -1,57 +1,84 @@
 .header {
-    background-color: #fff;
-    box-shadow: 0 10px 20px rgba(31, 32, 65, .05);
-    z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  z-index: 1;
 
-    &__body {
-      margin: 0 auto;
-      max-width: 1440px;
-      min-width: 320px;
-    }
-  
-    &__container {
-      align-items: center;
-      justify-content: space-between;
-      padding: 13px 0;
-    }
+  &__body {
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 320px;
   }
-  
-  .nav {
+
+  &__container {
     align-items: center;
-  
-    &__img {
-      padding-left: 5px;
-    }
-  
-    &__list {
-      align-items: center;
-      gap: 20px;
-    }
-  
-    &__link {
-      color: var(--dark-shade50);
-  
-      &-active {
-        color: rgba(31, 32, 65, 0.75);
-        font-weight: 700;
-      }
+    justify-content: space-between;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+}
 
-      &:hover{
-        color: var(--dark75);
-      }
+.nav {
+  align-items: center;
+
+  &__btn {
+    display: none;
+    width: 30px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+      height: 1px;
+      background-color: var(--main);
+      width: 100%;
     }
-  
-    &__user {
-      position: relative;
-  
-      ::after {
-        position: absolute;
-        content: '';
-        width: 1px;
-        height: 30px;
-        background: var(--dark-10);
-        left: -10px;
-        top: -5px;
-      }
+    
+    @media (max-width: 950px) {
+      display: flex;
     }
   }
+
+  &__img {
+    padding-left: 5px;
+  }
+
+  &__list {
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 950px) {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: var(--dark-shade50);
+
+    &-active {
+      color: rgba(31, 32, 65, 0.75);
+      font-weight: 700;
+    }
+
+    &:hover {
+      color: var(--dark75);
+    }
+  }
+
+  &__user {
+    position: relative;
+
+    ::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 30px;
+      background: var(--dark-10);
+      left: -10px;
+      top: -5px;
+    }
+  }
+}
