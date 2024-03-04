@@ -12,23 +12,30 @@ include ../../components/booking/booking.pug
 section(class="search-room")
   div(class="search-room__container container")
     aside(class="aside")
-      h3(class="aside__title") даты пребывания в отеле
-      +dropdown-calendar("ДД.ММ.ГГГГ")(class="drop-calendar")
-      h3(class="aside__title") гости
-      +dropdown-guests("Сколько гостей")
-      +range-slider
-      h3(class="aside__drop-title") правила дома
-      div(class="aside-checkbox")
-        +checkbox("Можно курить")
-        +checkbox("Можно с питомцами")
-        +checkbox("Можно пригласить гостей (до 10 человек)")
-      h3(class="aside__drop-title") доступность
-      div(class="aside-checkbox")
-        +checkbox("Ширина коридоров в номере не менее 91 см.","Широкий коридор")
-        +checkbox("На 1 этаже вас встретит специалист  и проводит до номера.","Помощник для инвалидов")
-      h3(class="aside__title") удобства номера
-      +dropdown-second("Удобства номера")
-      +dropdown-menu
+      button(class="aside__btn")
+        span
+        span
+        span
+        span
+        span
+      div(class="aside__hidebox")
+        h3(class="aside__title") даты пребывания в отеле
+        +dropdown-calendar("ДД.ММ.ГГГГ")(class="drop-calendar")
+        h3(class="aside__title") гости
+        +dropdown-guests("Сколько гостей")
+        +range-slider
+        h3(class="aside__drop-title") правила дома
+        div(class="aside-checkbox")
+          +checkbox("Можно курить")
+          +checkbox("Можно с питомцами")
+          +checkbox("Можно пригласить гостей (до 10 человек)")
+        h3(class="aside__drop-title") доступность
+        div(class="aside-checkbox")
+          +checkbox("Ширина коридоров в номере не менее 91 см.","Широкий коридор")
+          +checkbox("На 1 этаже вас встретит специалист  и проводит до номера.","Помощник для инвалидов")
+        h3(class="aside__title") удобства номера
+        +dropdown-second("Удобства номера")
+        +dropdown-menu
     div(class="search-room__titles")
       h1(class="search-room__title") Номера, которые мы для вас подобрали
       div(class="cards")

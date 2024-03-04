@@ -4,7 +4,7 @@
     grid-template-columns: 270px 370px;
     gap: 0 100px;
 
-    @media (max-width: 800px){
+    @media (max-width: 850px){
       grid-template-columns: 320px;
       gap: 20px;
       justify-content: center;

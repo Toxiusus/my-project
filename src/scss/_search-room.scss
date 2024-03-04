@@ -5,6 +5,9 @@
   &__title {
     margin-bottom: 25px;
     grid-column: 2;
+    @media (max-width: 630px) {
+      width: 270px;
+    }
   }
 
   &__container {
@@ -12,29 +15,69 @@
     margin: 0 auto 65px;
     max-width: 1160px;
     gap: 60px;
+    @media (max-width: 1250px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
 .aside {
   max-width: 266px;
-  
+
+  &__hidebox {
+    @media (max-width: 1250px) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    display: none;
+    width: 30px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+      height: 1px;
+      background-color: var(--main);
+      width: 100%;
+    }
+
+    @media (max-width: 1250px){
+      display: flex;
+    }
+
+  }
   &__title {
     margin-bottom: 5px;
   }
-  &__drop-title{
+  &__drop-title {
     margin-bottom: 17px;
   }
 }
-.aside-checkbox{
+.aside-checkbox {
   margin-bottom: 30px;
 }
-.drop-calendar{
+.drop-calendar {
   margin-bottom: 20px;
 }
 .cards {
   display: grid;
   grid-template-columns: 270px 270px 270px;
   gap: 20px 12px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 270px 270px;
+  }
+  @media (max-width: 630px) {
+    grid-template-columns: 270px;
+  }
 }
 
 .wrapper-active {
