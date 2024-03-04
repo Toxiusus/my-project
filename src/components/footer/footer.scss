@@ -16,6 +16,12 @@
       grid-template-columns: 260px 260px;
       justify-content: space-around;
     }
+    @media (max-width: 800px){
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
   }
 
   &__links {
@@ -48,6 +54,22 @@
   &__link {
     color: var(--dark-shade50);
   }
+
+  &__subscribe {
+    @media (max-width: 800px){
+      display: none;
+    }
+  }
+
+  &__text {
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  &__img {
+    justify-content: center;
+  }
 }
 
 .bot {
@@ -66,6 +88,10 @@
 
     @media (max-width: 1210px) {
       justify-content: space-around;
+    }
+    @media (max-width: 800px){
+      flex-direction: column;
+      gap: 20px;
     }
   }
 

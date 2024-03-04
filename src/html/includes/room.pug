@@ -12,10 +12,12 @@ include ../../components/dropdown-menu/dropdown-menu.pug
 
 section(class="room")
   div(class="room__content")
-    div(class="room__images")
-      img(class="room__largeimg" src=require('/src/images/room-1.png') alt='logo')
-      img(class="room__img" src=require('/src/images/room-2.png') alt='logo')
-      img(class="room__img" src=require('/src/images/room-3.png') alt='logo')
+    div(class="room__images flex")
+      div
+        img(class="room__img" src=require('/src/images/room-1.png') alt='logo')
+      div(class="room__aside flex")
+        img(class="room__img" src=require('/src/images/room-2.png') alt='logo')
+        img(class="room__img" src=require('/src/images/room-3.png') alt='logo')
     div(class="room__global flex container")
       div(class="room__box")
         div(class="room-about")

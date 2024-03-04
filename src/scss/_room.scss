@@ -1,32 +1,40 @@
 .room {
   border-bottom: 1px solid rgb(225, 225, 225);
-
   &__images {
-    display: grid;
-    grid-template-columns: auto 695px;
-    grid-template-rows: 242px 242px;
+    justify-content: center;
+    align-items: center;
   }
-
-  &__largeimg {
-    width: 100%;
-    align-self: stretch;
-    grid-row: 1/-1;
-    grid-column: 1/2;
-  }
-
-  &__img {
-    align-self: stretch;
-    width: 100%;
-    object-fit: cover;
+  &__aside {
+    flex-direction: column;
+    height: 50%;
+    @media (max-width: 1250px) {
+      display: none;
+    }
   }
   &__global {
-    padding: 70px 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    @media (max-width: 850px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    @media (max-width: 1250px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 }
 
 .room-about {
   display: grid;
   grid-template-columns: 400px 400px;
+  @media (max-width: 850px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
 }
 
 .impressions {
@@ -87,7 +95,7 @@
       border-radius: 50%;
       width: 10px;
       height: 10px;
-      background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+      background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
     }
   }
 
@@ -100,7 +108,10 @@
       border-radius: 50%;
       width: 10px;
       height: 10px;
-      background: var(--Secondary-Gradient, linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%));
+      background: var(
+        --Secondary-Gradient,
+        linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%)
+      );
     }
   }
 
@@ -113,7 +124,10 @@
       border-radius: 50%;
       width: 10px;
       height: 10px;
-      background: var(--Primary-Gradient, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%));
+      background: var(
+        --Primary-Gradient,
+        linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%)
+      );
     }
   }
 
@@ -126,7 +140,7 @@
       border-radius: 50%;
       width: 10px;
       height: 10px;
-      background: linear-gradient(180deg, #909090 0%, #3D4975 100%);
+      background: linear-gradient(180deg, #909090 0%, #3d4975 100%);
     }
   }
 }

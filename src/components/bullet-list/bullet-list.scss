@@ -3,6 +3,14 @@
     display: grid;
     grid-template-columns: 270px 370px;
     gap: 0 100px;
+
+    @media (max-width: 800px){
+      grid-template-columns: 320px;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 40px;
+    }
   
     &__title {
       margin-bottom: 20px;
@@ -25,7 +33,6 @@
         width: 10px;
         height: 10px;
         background: rgba(31, 32, 65, 0.25);
-        ;
       }
     }
   }
