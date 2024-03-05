@@ -5,7 +5,6 @@ import './scss/_room.scss';
 import './scss/_signin.scss';
 import './scss/_search-room.scss';
 import './fonts/fonts.scss';
-import './scss/_registration.scss';
 import './components/button/button.scss';
 import './components/checkbox/checkbox.scss';
 import './components/range-slider/range-slider.scss';
