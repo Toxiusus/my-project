@@ -35,3 +35,4 @@ import "./js/range-slider";
 import "./js/like";
 import "./js/calendar";
 import "./js/burger";
+import "./js/side-bar";

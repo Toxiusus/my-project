@@ -5,7 +5,7 @@
   &__title {
     margin-bottom: 25px;
     grid-column: 2;
-    @media (max-width: 630px) {
+    @media (max-width: 750px) {
       width: 270px;
     }
   }
@@ -28,17 +28,30 @@
 
   &__hidebox {
     @media (max-width: 1250px) {
-      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateX(-200%);
+      transition: transform 0.5s ease;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 0 25px rgba(0,0,0,.2);
+      margin-top: 80px;
+      padding: 20px;
+      z-index: 3;
     }
   }
 
+  &__open {
+    transform: translateX(0);
+  }
+
   &__btn {
+    position: fixed;
+    right: 50px;
     display: none;
     width: 30px;
     height: 25px;
-    border: none;
-    background-color: transparent;
-    padding: 0;
     border-radius: 0;
     flex-direction: column;
     justify-content: space-between;
@@ -49,10 +62,9 @@
       width: 100%;
     }
 
-    @media (max-width: 1250px){
+    @media (max-width: 1250px) {
       display: flex;
     }
-
   }
   &__title {
     margin-bottom: 5px;
@@ -72,10 +84,10 @@
   grid-template-columns: 270px 270px 270px;
   gap: 20px 12px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1030px) {
     grid-template-columns: 270px 270px;
   }
-  @media (max-width: 630px) {
+  @media (max-width: 750px) {
     grid-template-columns: 270px;
   }
 }
