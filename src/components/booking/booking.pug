@@ -12,7 +12,7 @@ mixin booking
         div(class="booking__guests")
             h3(class!=attributes.class) гости
             +dropdown-guests("Сколько гостей")(class="drop-hero")(class="drop-hero__input")
-        +button({span:"подобрать номер", size:"stretching"},"a","sign-in.pug")(class="booking__button")
+        +button({span:"подобрать номер", size:"stretching"},"a","search-room.pug")(class="booking__button")
 
 mixin room-booking
     div(class="booking" class!=attributes.class)
